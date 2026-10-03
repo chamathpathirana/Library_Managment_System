@@ -61,8 +61,16 @@ public class LoginpageController {
 
     @FXML
     void btnRestOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
 
-
+        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        errorStage.close();
 
 
     }
