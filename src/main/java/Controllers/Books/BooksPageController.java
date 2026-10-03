@@ -53,6 +53,16 @@ public class BooksPageController {
 
     @FXML
     void btnBorrowOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/BorrowingHist_Page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        errorStage.close();
 
     }
 
@@ -73,6 +83,16 @@ public class BooksPageController {
 
     @FXML
     void btnIssueBookOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/issueBook_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        errorStage.close();
 
     }
 
@@ -93,6 +113,16 @@ public class BooksPageController {
 
     @FXML
     void btnReturnBookOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/RetrunBook_Page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        errorStage.close();
 
     }
 
