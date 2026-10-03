@@ -1,0 +1,26 @@
+
+.header {
+    -fx-background-color: #E96151;
+    -fx-padding: 15px 25px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 20px;
+
+    -fx-background-radius: 0 0 15px 15px;
+}
+
+
+/* Header Title */
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+
+/* Header Subtitle */
+
+.header-subtitle {
+    -fx-text-fill: #FFE8E4;
+    -fx-font-size: 13px;
+}
