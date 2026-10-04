@@ -100,7 +100,7 @@ public class BooksPageController {
     void btnMemberOnAction(ActionEvent event) {
         Stage stage = new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AddMembers_page.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Members_page.fxml"))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
