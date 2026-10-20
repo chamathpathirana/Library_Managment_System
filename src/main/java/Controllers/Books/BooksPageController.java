@@ -18,6 +18,10 @@ public class BooksPageController {
     @FXML
     private Button btnBorrow;
 
+
+    @FXML
+    private Button btnAddBook;
+
     @FXML
     private Button btnExit;
 
@@ -32,6 +36,8 @@ public class BooksPageController {
 
     @FXML
     private Button btnHome;
+
+
 
 
 
@@ -142,4 +148,27 @@ public class BooksPageController {
 
     }
 
+
+
+    @FXML
+    void btnAddBooksOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void btnAddBookOnAction(ActionEvent actionEvent) {
+        System.out.println("chamath");
+        Stage  stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AddBook_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+    }
 }

@@ -19,6 +19,7 @@ public class AddMembersPageController {
     @FXML
     private Button btnRegister;
 
+
     @FXML
     private TextField txtAddress;
 

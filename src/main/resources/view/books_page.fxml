@@ -43,7 +43,7 @@
             </Button>
          </children>
       </VBox>
-      <VBox layoutX="220.0" layoutY="113.0" prefHeight="71.0" prefWidth="166.0" styleClass="card" stylesheets="@css/style2.css">
+      <VBox layoutX="207.0" layoutY="307.0" prefHeight="71.0" prefWidth="166.0" styleClass="card" stylesheets="@css/style2.css">
          <children>
             <Label alignment="CENTER" prefHeight="42.0" prefWidth="129.0" text="Issue Book">
                <font>
@@ -98,7 +98,7 @@
             </Button>
          </children>
       </VBox>
-      <VBox layoutX="328.0" layoutY="294.0" prefHeight="71.0" prefWidth="166.0" styleClass="card" stylesheets="@css/style2.css">
+      <VBox layoutX="445.0" layoutY="307.0" prefHeight="71.0" prefWidth="166.0" styleClass="card" stylesheets="@css/style2.css">
          <children>
             <Label alignment="CENTER" prefHeight="29.0" prefWidth="125.0" text="Borrow History">
                <font>
@@ -126,5 +126,31 @@
             </Button>
          </children>
       </VBox>
+      <VBox layoutX="207.0" layoutY="113.0" prefHeight="71.0" prefWidth="166.0" styleClass="card" stylesheets="@css/style2.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="129.0" text="Add Book">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/arrow.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="-4.0" left="39.0" top="1.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="btnAddBook" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="26.0" prefWidth="49.0" text="Go" textFill="#26c8f4">
+               <VBox.margin>
+                  <Insets left="32.0" top="17.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+     
    </children>
 </AnchorPane>
