@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class AddMembersPageController {
+    AddMemberController addMemberController = new AddMemberController();
 
     @FXML
     private Button btnClear;
@@ -51,11 +52,18 @@ public class AddMembersPageController {
 
     }
 
-    @FXML
-    void btnRegisterOnAction(ActionEvent event) {
+
+    public void btnMemberRegisterOnAction(ActionEvent actionEvent) {
+        addMemberController.addMembers(
+                txtMemberId.getText(),
+                txtFullName.getText(),
+                txtEmail.getText(),
+                Integer.valueOf(txtPhoneNum.getText()),
+                txtAddress.getText()
+        );
+
 
 
 
     }
-
 }
