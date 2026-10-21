@@ -1,0 +1,94 @@
+create database LibraryManagementSystem;
+
+use  LibraryManagementSystem;
+
+CREATE TABLE Users(
+     user_id INT AUTO_INCREMENT PRIMARY KEY,
+     username VARCHAR(50) NOT NULL,
+     password VARCHAR(50) NOT NULL
+);
+
+//===========BOOK TABLE FOR "Adding books and View books"====================
+
+CREATE TABLE books(
+     book_id VARCHAR(50) PRIMARY KEY,
+     title VARCHAR(150) NOT NULL,
+     author VARCHAR(100) NOT NULL,
+     category VARCHAR(50),
+     quantity INT NOT NULL,
+     published_year INT
+);
+
+//===================MEMBER TABLE FOR Add members and View members================
+
+CREATE TABLE members(
+     member_id VARCHAR(50) PRIMARY KEY,
+     full_name VARCHAR(100) NOT NULL,
+     email VARCHAR(100),
+     phone_number VARCHAR(20),
+     address TEXT
+);
+
+//====================ISSUEBOOK TABLE=================================
+
+CREATE TABLE issueBook(
+     borrowMember varchar(100),
+     borrowBook varchar(100),
+     issuedate date,
+     duedate date
+);
+
+
+//=================================Add Gaththu poth================
+
+CREATE TABLE borrow_records (
+         borrow_id INT AUTO_INCREMENT PRIMARY KEY,
+         member_id VARCHAR(50),
+         book_id VARCHAR(50),
+         issue_date DATE NOT NULL,
+         due_date DATE NOT NULL,
+         return_date DATE,
+         status VARCHAR(20) DEFAULT 'Borrowed',
+         FOREIGN KEY (member_id) REFERENCES members(member_id),
+         FOREIGN KEY (book_id) REFERENCES books(book_id)
+     );
+
+//========================Poth add karaaa==============================
+
+INSERT INTO books (book_id, title, author, category, published_year, quantity) VALUES
+     ('B001', 'JavaFX Programming', 'John Smith', 'Programming', 2022, 5),
+     ('B002', 'Database Management', 'Alice Johnson', 'Computer Science', 2021, 3),
+     ('B003', 'Data Structures', 'Robert Fox', 'Computer Science', 2023, 4);
+
+//================================Login user add============================
+
+INSERT INTO users (username, password) VALUES ('admin', 'admin123');
+
+
+//=============================members add karaa===============================
+
+INSERT INTO members(member_id,full_name,email,phone_number,address)VALUES
+     ('M001','Chamath Manodya','chamath22@gmail.com','0718145190','Matara'),
+     ('M002','Shenal Motha','Shenal@gmail.com','0716185290','Panadura');
+
+=================================Borrow recod add kra================================
+
+ INSERT INTO borrow_records(member_id,book_id,issue_date,due_date,status)VALUES
+    ('M001','B001','2026-10-13','2026-10-18','Borrowed');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

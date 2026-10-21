@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class BooksPageController {
 
+
     @FXML
     private Button btnBooks;
 
@@ -150,16 +151,7 @@ public class BooksPageController {
 
 
 
-    @FXML
-    void btnAddBooksOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
-    }
 
     public void btnAddBookOnAction(ActionEvent actionEvent) {
         System.out.println("chamath");
@@ -170,5 +162,9 @@ public class BooksPageController {
             throw new RuntimeException(e);
         }
         stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent
+                .getSource()).getScene().getWindow();
+        errorStage.close();
     }
 }
