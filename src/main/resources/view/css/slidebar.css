@@ -1,0 +1,106 @@
+
+/* ===== LEFT SIDEBAR VBOX ===== */
+
+.sidebar-vbox {
+    -fx-background-color: linear-gradient(
+        to bottom,
+        #10213F,
+        #142B4D,
+        #0C1C36
+    );
+
+    -fx-background-radius: 8px;
+    -fx-padding: 18px 12px 15px 12px;
+    -fx-spacing: 10px;
+
+    -fx-border-color: #243F65;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+
+/* ===== SIDEBAR BUTTONS ===== */
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E5EDFA;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+
+    -fx-alignment: CENTER_LEFT;
+    -fx-content-display: LEFT;
+    -fx-graphic-text-gap: 14px;
+
+    -fx-padding: 12px 14px;
+    -fx-min-height: 42px;
+    -fx-max-width: Infinity;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+}
+
+/* ===== BUTTON HOVER ===== */
+
+.sidebar-button:hover {
+    -fx-background-color: #233F68;
+    -fx-text-fill: white;
+}
+
+/* ===== ACTIVE BUTTON ===== */
+
+.sidebar-button-active {
+    -fx-background-color: linear-gradient(
+        to right,
+        #FF6669,
+        #F04458
+    );
+
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+
+    -fx-alignment: CENTER_LEFT;
+    -fx-content-display: LEFT;
+    -fx-graphic-text-gap: 14px;
+
+    -fx-padding: 12px 14px;
+    -fx-min-height: 42px;
+    -fx-max-width: Infinity;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(240, 68, 88, 0.20),
+        6,
+        0.1,
+        0,
+        2
+    );
+}
+
+/* ===== ACTIVE BUTTON HOVER ===== */
+
+.sidebar-button-active:hover {
+    -fx-background-color: #FF7478;
+}
+
+/* ===== SIDEBAR BOTTOM TEXT ===== */
+
+.sidebar-footer {
+    -fx-text-fill: #C5D4EC;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+    -fx-alignment: CENTER;
+}
+
+/* ===== SIDEBAR SEPARATOR ===== */
+
+.sidebar-separator {
+    -fx-background-color: #304867;
+    -fx-opacity: 0.7;
+}

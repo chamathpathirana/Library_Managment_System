@@ -167,4 +167,8 @@ public class BooksPageController {
                 .getSource()).getScene().getWindow();
         errorStage.close();
     }
+
+    public void btnLogoutOnAction(ActionEvent actionEvent) {
+
+    }
 }
