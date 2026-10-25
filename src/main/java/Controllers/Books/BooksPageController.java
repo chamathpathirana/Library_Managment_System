@@ -77,7 +77,7 @@ public class BooksPageController {
     void btnExitOnAction(ActionEvent event) {
         Stage stage = new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -163,12 +163,23 @@ public class BooksPageController {
         }
         stage.show();
 
-        Stage errorStage = (Stage) ((Node) actionEvent
-                .getSource()).getScene().getWindow();
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         errorStage.close();
     }
 
     public void btnLogoutOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+
 
     }
 }
