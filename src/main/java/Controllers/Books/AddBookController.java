@@ -34,8 +34,6 @@ public class AddBookController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
         return null;
     }
 
