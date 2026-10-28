@@ -85,7 +85,7 @@
 
 /* ===== ACTIVE BUTTON HOVER ===== */
 
-.sidebar-button-active:hover {
+.sidebarbuttonactivehover {
     -fx-background-color: #FF7478;
 }
 
@@ -98,9 +98,66 @@
     -fx-alignment: CENTER;
 }
 
+
+
 /* ===== SIDEBAR SEPARATOR ===== */
 
 .sidebar-separator {
     -fx-background-color: #304867;
     -fx-opacity: 0.7;
+}
+
+
+
+/* Normal Button */
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E5EDFA;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+
+    -fx-alignment: CENTER_LEFT;
+    -fx-content-display: LEFT;
+    -fx-graphic-text-gap: 14px;
+
+    -fx-padding: 12px 14px;
+    -fx-min-height: 42px;
+    -fx-max-width: Infinity;
+
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+/* Mouse Cursor Hover - Orange */
+.sidebar-button:hover {
+    -fx-background-color: #FF8C42;
+    -fx-text-fill: white;
+}
+
+/* Click / Press Effect */
+.sidebar-button:pressed {
+    -fx-background-color: #E87525;
+    -fx-text-fill: white;
+}
+
+/* Active Button */
+.sidebar-button-active {
+    -fx-background-color: #F04458;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12px 14px;
+    -fx-min-height: 42px;
+    -fx-max-width: Infinity;
+
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+/* Active Button Hover - Orange */
+.sidebar-button-active:hover {
+    -fx-background-color: #FF8C42;
+    -fx-text-fill: white;
 }

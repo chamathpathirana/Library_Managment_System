@@ -14,16 +14,12 @@
 
 <AnchorPane prefHeight="629.0" prefWidth="1045.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BooksPageController">
    <children>
-      <VBox layoutY="54.4" prefHeight="575.0" prefWidth="182.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="54.0">
+      <VBox layoutY="52.0" prefHeight="578.0" prefWidth="182.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="52.0">
          <children>
-            <Button fx:id="btnHome" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="38.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="42.0" prefWidth="130.0" text="Home">
+            <Button fx:id="btnHome" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="38.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="sidebar-button" text="Home">
                <VBox.margin>
                   <Insets bottom="21.0" left="15.0" right="15.0" top="7.0" />
                </VBox.margin>
-               <styleClass>
-                  <String fx:value="sidebar-button" />
-                  <String fx:value="sidebar-button-active" />
-               </styleClass>
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -32,14 +28,10 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnMembers" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnMemberOnAction" prefHeight="43.0" prefWidth="130.0" text="Members">
+            <Button fx:id="btnMembers" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnMemberOnAction" prefHeight="43.0" prefWidth="130.0" styleClass="sidebar-button" text="Members">
                <VBox.margin>
                   <Insets bottom="21.0" left="15.0" right="15.0" />
                </VBox.margin>
-               <styleClass>
-                  <String fx:value="sidebar-button" />
-                  <String fx:value="sidebar-button-active" />
-               </styleClass>
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -51,14 +43,10 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnBooks" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnBooksOnAction" prefHeight="26.0" prefWidth="66.0" text="Books">
+            <Button fx:id="btnBooks" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnBooksOnAction" prefHeight="26.0" prefWidth="66.0" styleClass="sidebar-button" text="Books">
                <VBox.margin>
                   <Insets bottom="21.0" left="15.0" right="15.0" />
                </VBox.margin>
-               <styleClass>
-                  <String fx:value="sidebar-button" />
-                  <String fx:value="sidebar-button-active" />
-               </styleClass>
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -67,14 +55,10 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnExit" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="26.0" prefWidth="68.0" text="Exit">
+            <Button fx:id="btnExit" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="26.0" prefWidth="68.0" styleClass="sidebar-button" text="Exit">
                <VBox.margin>
                   <Insets bottom="21.0" left="15.0" right="15.0" />
                </VBox.margin>
-               <styleClass>
-                  <String fx:value="sidebar-button" />
-                  <String fx:value="sidebar-button-active" />
-               </styleClass>
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -83,11 +67,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnLoginOut" layoutX="63.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="26.0" prefWidth="68.0" text="Logout">
-               <styleClass>
-                  <String fx:value="sidebar-button" />
-                  <String fx:value="sidebar-button-active" />
-               </styleClass>
+            <Button fx:id="btnLoginOut" layoutX="63.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="26.0" prefWidth="68.0" styleClass="sidebar-button" text="Log Out">
                <VBox.margin>
                   <Insets bottom="21.0" left="15.0" right="15.0" />
                </VBox.margin>
@@ -117,7 +97,7 @@
             </Text>
          </children>
       </VBox>
-      <VBox layoutX="207.0" layoutY="307.0" prefHeight="170.0" prefWidth="311.0" stylesheets="@css/bookpage.css">
+      <VBox layoutX="206.0" layoutY="356.0" prefHeight="170.0" prefWidth="311.0" stylesheets="@css/bookpage.css">
          <children>
             <Label alignment="CENTER" prefHeight="42.0" prefWidth="129.0" styleClass="card-title" text="Issue Book">
                <font>
@@ -161,12 +141,12 @@
             <String fx:value="issue-book-card" />
          </styleClass>
       </VBox>
-      <Label layoutY="-3.0" prefHeight="58.0" prefWidth="1071.0" style="-fx-background-color: #F3722C;" text="           Library Management System" textFill="WHITE">
+      <Label layoutY="-3.0" prefHeight="54.0" prefWidth="1071.0" style="-fx-background-color: #F3722C;" text="           Library Management System" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <VBox layoutX="547.0" layoutY="98.0" prefHeight="166.0" prefWidth="311.0" stylesheets="@css/bookpage.css">
+      <VBox layoutX="546.0" layoutY="171.0" prefHeight="172.0" prefWidth="322.0" stylesheets="@css/bookpage.css">
          <children>
             <Label alignment="CENTER" prefHeight="42.0" prefWidth="129.0" styleClass="card-title" text="Return Book">
                <font>
@@ -210,7 +190,7 @@
             <String fx:value="return-book-card" />
          </styleClass>
       </VBox>
-      <VBox layoutX="541.0" layoutY="306.0" prefHeight="172.0" prefWidth="311.0" stylesheets="@css/bookpage.css">
+      <VBox layoutX="546.0" layoutY="356.0" prefHeight="172.0" prefWidth="311.0" stylesheets="@css/bookpage.css">
          <children>
             <Label alignment="CENTER" prefHeight="28.0" prefWidth="140.0" styleClass="card-title" text="Borrow History">
                <font>
@@ -254,7 +234,7 @@
             <String fx:value="history-book-card" />
          </styleClass>
       </VBox>
-      <VBox layoutX="209.0" layoutY="97.0" prefHeight="166.0" prefWidth="283.0" stylesheets="@css/bookpage.css">
+      <VBox layoutX="206.0" layoutY="171.0" prefHeight="166.0" prefWidth="283.0" stylesheets="@css/bookpage.css">
          <children>
             <Label alignment="CENTER" prefHeight="42.0" prefWidth="129.0" styleClass="card-title" text="Add Book">
                <font>
@@ -298,23 +278,33 @@
             <String fx:value="book-card" />
          </styleClass>
       </VBox>
-      <ImageView fitHeight="133.0" fitWidth="202.0" layoutX="864.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="133.0" fitWidth="202.0" layoutX="868.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/books_plant_illustration.png" />
          </image>
       </ImageView>
-      <Text fill="#918a8a" layoutX="207.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="____________________________________________________________________________________________________________________________________________________________________" wrappingWidth="848.5366363525391" />
-      <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="209.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true">
+      <Text fill="#918a8a" layoutX="206.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="____________________________________________________________________________________________________________________________________________________________________" wrappingWidth="848.5366363525391" />
+      <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="207.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-book-48.png" />
          </image>
       </ImageView>
-      <Text fill="#7b6f6f" layoutX="249.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Better Readers = A Brighter Future" wrappingWidth="230.13671875" />
-      <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <Text fill="#7b6f6f" layoutX="247.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Better Readers = A Brighter Future" wrappingWidth="230.13671875" />
+      <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-library-50.png" />
          </image>
       </ImageView>
+      <Text layoutX="205.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books" wrappingWidth="202.0">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Text>
+      <Text fill="#6b6666" layoutX="205.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage your library books and borrowing activities" wrappingWidth="544.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
      
    </children>
 </AnchorPane>

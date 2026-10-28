@@ -55,7 +55,12 @@ public class AddBookPageController implements Initializable {
                 txtCategory.getValue().toString(),
                 Integer.parseInt(txtQuantity.getText()),
                 txtPublishedYear.getText()
+
+
+
         );
+        txtBookID.setText(addBookController.genarateBookId());
+        txtBookID.setEditable(false);
 
 
     }
@@ -76,6 +81,9 @@ public class AddBookPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        txtBookID.setText(addBookController.genarateBookId());
+        txtBookID.setEditable(false);
+
         ObservableList<String> cmbList = FXCollections.observableArrayList();
         cmbList.add("Love Story");
         cmbList.add("Adventure");

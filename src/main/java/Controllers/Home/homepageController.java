@@ -93,4 +93,13 @@ public class homepageController {
 
     }
 
+    public void btnBorrowHisOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnReturnBookOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnIssueBookOnAction(ActionEvent actionEvent) {
+        
+    }
 }
