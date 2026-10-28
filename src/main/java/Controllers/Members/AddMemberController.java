@@ -12,7 +12,8 @@ public class AddMemberController {
 
     public String genarateMemberID(){
         String SQL = """
-                SELECT MAX(CAST(SUBSTRING(member_id, 2) AS UNSIGNED)) FROM members WHERE member_id REGEXP '^M[0-9]+$'""";
+               
+               SELECT MAX(CAST(SUBSTRING(member_id, 2) AS UNSIGNED)) FROM members WHERE member_id REGEXP '^M[0-9]+$'""";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);

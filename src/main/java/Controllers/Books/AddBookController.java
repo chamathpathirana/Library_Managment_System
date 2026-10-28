@@ -15,6 +15,7 @@ public class AddBookController {
 
     public String genarateBookId(){
         String SQL = """
+            
                 SELECT MAX(CAST(SUBSTRING(book_id, 2) AS UNSIGNED)) FROM books WHERE book_id REGEXP '^B[0-9]+$'""";
 
         try {

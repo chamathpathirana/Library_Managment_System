@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="542.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MembersPageController">
+<AnchorPane prefHeight="542.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.ViewMembersPageController">
    <children>
       <VBox prefHeight="546.0" prefWidth="175.0" style="-fx-background-color: #6D6875;">
          <children>
@@ -65,13 +64,13 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <TableView layoutX="175.0" layoutY="163.2" prefHeight="383.0" prefWidth="510.0" AnchorPane.topAnchor="163.0">
+      <TableView fx:id="tblMembers" layoutX="175.0" layoutY="168.0" prefHeight="378.0" prefWidth="510.0" AnchorPane.topAnchor="168.0">
         <columns>
-          <TableColumn prefWidth="100.0" text="Member Id" />
-          <TableColumn prefWidth="90.0" sortType="DESCENDING" text="Name" />
-            <TableColumn prefWidth="110.0" sortType="DESCENDING" text="Email" />
-            <TableColumn prefWidth="90.0" sortType="DESCENDING" text="Phone No" />
-            <TableColumn prefWidth="110.0" sortType="DESCENDING" text="Address" />
+          <TableColumn fx:id="colMemberID" prefWidth="100.0" text="Member Id" />
+          <TableColumn fx:id="colMemberName" prefWidth="90.0" sortType="DESCENDING" text="Name" />
+            <TableColumn fx:id="colMemberEmail" prefWidth="110.0" sortType="DESCENDING" text="Email" />
+            <TableColumn fx:id="colMemberPhNumber" prefWidth="90.0" sortType="DESCENDING" text="Phone No" />
+            <TableColumn fx:id="colMemberAddress" prefWidth="110.0" sortType="DESCENDING" text="Address" />
         </columns>
       </TableView>
    </children>
