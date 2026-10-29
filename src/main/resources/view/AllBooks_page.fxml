@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="629.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.AllBooksPageController">
+   <children>
+      <TableView fx:id="tblAllBooks" layoutX="204.0" layoutY="201.0" prefHeight="395.0" prefWidth="819.0">
+        <columns>
+          <TableColumn fx:id="ColBookID" minWidth="11.0" prefWidth="135.79995441436768" text="Book_id" />
+          <TableColumn fx:id="ColBookName" prefWidth="135.79995441436768" text="Book_Name" />
+            <TableColumn fx:id="ColAuthor" prefWidth="135.79995441436768" text="Author" />
+            <TableColumn fx:id="ColCategory" prefWidth="135.79995441436768" text="Category" />
+            <TableColumn fx:id="ColQuantity" prefWidth="135.79995441436768" text="Quantity" />
+            <TableColumn fx:id="ColPublishedYear" prefWidth="135.79995441436768" text="Published_Year" />
+        </columns>
+      </TableView>
+      <Label prefHeight="54.0" prefWidth="1072.0" style="-fx-background-color: #F3722C;" text="           Library Management System" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <VBox layoutX="-6.0" layoutY="54.0" prefHeight="578.0" prefWidth="182.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css">
+         <children>
+            <Button fx:id="btnHome" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="38.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="sidebar-button" text="Home">
+               <VBox.margin>
+                  <Insets bottom="21.0" left="15.0" right="15.0" top="7.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-home-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnMembers" layoutX="10.0" layoutY="53.0" mnemonicParsing="false" onAction="#btnMemberOnAction" prefHeight="43.0" prefWidth="130.0" styleClass="sidebar-button" text="Members">
+               <VBox.margin>
+                  <Insets bottom="21.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-member-24.png" />
+                     </image>
+                     <rotationAxis>
+                        <Point3D y="1.0" z="1.0" />
+                     </rotationAxis>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnBooks" layoutX="10.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnBooksOnAction" prefHeight="26.0" prefWidth="66.0" styleClass="sidebar-button" text="Books">
+               <VBox.margin>
+                  <Insets bottom="21.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-book-50%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnAllBooks" layoutX="38.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnAllBooksOnAction" prefHeight="42.0" prefWidth="115.0" styleClass="sidebar-button" text="All Books">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-logout-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="21.0" left="15.0" right="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnExit" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="26.0" prefWidth="68.0" styleClass="sidebar-button" text="Exit">
+               <VBox.margin>
+                  <Insets bottom="21.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-return-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnLoginOut" layoutX="63.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="26.0" prefWidth="68.0" styleClass="sidebar-button" text="Log Out">
+               <VBox.margin>
+                  <Insets bottom="21.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-logout-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="129.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/original_sidebar_books_plant.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="12.0" top="11.0" />
+               </VBox.margin>
+            </ImageView>
+            <Text fill="#dfd9d9" strokeType="OUTSIDE" strokeWidth="0.0" text="Read more Glow more" wrappingWidth="77.35702514648438">
+               <VBox.margin>
+                  <Insets left="32.0" top="-1.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="21.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-library-50.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSearcBook" layoutX="396.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnSearcBookOnAction" prefHeight="30.0" prefWidth="92.0" text="Search" />
+      <TextField fx:id="txtSearchBook" layoutX="222.0" layoutY="109.0" prefHeight="31.0" prefWidth="173.0" promptText="Search Book" />
+      <Button fx:id="btnAddBook" layoutX="840.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="31.0" prefWidth="144.0" stylesheets="@css/bookpage.css" text="+ Add Book" textFill="#26c8f4">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="add-book-button" />
+            <String fx:value="book-button" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

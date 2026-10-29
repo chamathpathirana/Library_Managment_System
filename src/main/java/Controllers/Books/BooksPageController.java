@@ -38,6 +38,9 @@ public class BooksPageController {
     @FXML
     private Button btnHome;
 
+    @FXML
+    private Button btnAllBooks;
+
 
 
 
@@ -107,7 +110,7 @@ public class BooksPageController {
     void btnMemberOnAction(ActionEvent event) {
         Stage stage = new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Members_page.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ViewMembers_page.fxml"))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -180,6 +183,20 @@ public class BooksPageController {
         Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         errorStage.close();
 
+
+    }
+
+    public void btnAllBooksOnAction(ActionEvent actionEvent) {
+      Stage stage= new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Allbooks_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
 
     }
 }

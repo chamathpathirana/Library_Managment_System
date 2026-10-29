@@ -50,10 +50,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnIssueBook" layoutX="57.0" layoutY="268.0" mnemonicParsing="false" onAction="#btnIssueBookOnAction" prefHeight="42.0" prefWidth="122.0" styleClass="sidebar-button" text="Issue Book">
-               <VBox.margin>
-                  <Insets bottom="-5.0" left="-4.0" right="1.0" top="14.0" />
-               </VBox.margin>
+            <Button fx:id="btnAllBooks" layoutX="19.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnAllBooksOnAction" prefHeight="42.0" prefWidth="122.0" styleClass="sidebar-button" text="All Books">
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -61,18 +58,9 @@
                      </image>
                   </ImageView>
                </graphic>
-            </Button>
-            <Button fx:id="btnReturnBook" layoutX="23.0" layoutY="321.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="42.0" prefWidth="138.0" styleClass="sidebar-button" text="Return Book">
                <VBox.margin>
                   <Insets bottom="-5.0" left="-4.0" right="1.0" top="14.0" />
                </VBox.margin>
-               <graphic>
-                  <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/icons8-return-64.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </Button>
             <Button fx:id="btnBorrowHis" layoutX="23.0" layoutY="374.0" mnemonicParsing="false" onAction="#btnBorrowHisOnAction" prefHeight="26.0" prefWidth="71.0" styleClass="sidebar-button" text="Borrow History">
                <VBox.margin>
