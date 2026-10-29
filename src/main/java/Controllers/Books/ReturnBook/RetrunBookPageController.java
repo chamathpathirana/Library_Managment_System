@@ -1,4 +1,4 @@
-package Controllers.Books;
+package Controllers.Books.ReturnBook;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,13 +10,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class issueBookPage {
+public class RetrunBookPageController {
 
     @FXML
     private Button btnExit;
 
     @FXML
-    private Button btnIssueBooks;
+    private Button btnRetrunBook;
 
     @FXML
     void btnExitOnAction(ActionEvent event) {
@@ -34,7 +34,7 @@ public class issueBookPage {
     }
 
     @FXML
-    void btnIssueBooksOnAction(ActionEvent event) {
+    void btnRetrunBookOnAction(ActionEvent event) {
 
     }
 

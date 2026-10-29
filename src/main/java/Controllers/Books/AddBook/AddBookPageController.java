@@ -1,4 +1,4 @@
-package Controllers.Books;
+package Controllers.Books.AddBook;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -55,8 +55,6 @@ public class AddBookPageController implements Initializable {
                 txtCategory.getValue().toString(),
                 Integer.parseInt(txtQuantity.getText()),
                 txtPublishedYear.getText()
-
-
 
         );
         txtBookID.setText(addBookController.genarateBookId());

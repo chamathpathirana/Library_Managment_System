@@ -1,4 +1,4 @@
-package Controllers.Books;
+package Controllers.Books.BorrowingHistroy;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,16 +10,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class RetrunBookPageController {
+public class BorrowingHistroy_page {
 
     @FXML
-    private Button btnExit;
+    private Button btnBack;
 
     @FXML
-    private Button btnRetrunBook;
-
-    @FXML
-    void btnExitOnAction(ActionEvent event) {
+    void btnBackOnAction(ActionEvent event) {
         Stage stage = new Stage();
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/books_page.fxml"))));
@@ -30,11 +27,6 @@ public class RetrunBookPageController {
 
         Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         errorStage.close();
-
-    }
-
-    @FXML
-    void btnRetrunBookOnAction(ActionEvent event) {
 
     }
 

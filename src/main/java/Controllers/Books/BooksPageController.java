@@ -43,8 +43,6 @@ public class BooksPageController {
 
 
 
-
-
     @FXML
     void btnBooksOnAction(ActionEvent event) {
         Stage stage = new Stage();

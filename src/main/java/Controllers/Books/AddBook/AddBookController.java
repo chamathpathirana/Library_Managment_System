@@ -1,4 +1,4 @@
-package Controllers.Books;
+package Controllers.Books.AddBook;
 
 
 import Controllers.DB.dbConnection;
@@ -41,14 +41,14 @@ public class AddBookController {
 
 
 
-     public void addBooks(String book_id, String title , String author, String category, int quantity, String published_year){
-         String SQL = "INSERT INTO books(book_id , title , author , category , quantity , published_year)VALUES(?,?,?,?,?,?);";
+     public void addBooks(String book_id, String Book_name , String author, String category, int quantity, String published_year){
+         String SQL = "INSERT INTO books(book_id , Book_name , author , category , quantity , published_year)VALUES(?,?,?,?,?,?);";
 
          try {
              PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
              preparedStatement.setString(1,book_id);
-             preparedStatement.setString(2,title);
+             preparedStatement.setString(2,Book_name);
              preparedStatement.setString(3,author);
              preparedStatement.setString(4,category);
              preparedStatement.setInt(5,quantity);

@@ -1,8 +1,12 @@
-package Controllers.Books;
+package Controllers.Books.ViewAllBooks;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,26 +16,31 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.Map;
+import java.util.ResourceBundle;
 
-public class AllBooksPageController {
+public class AllBooksPageController implements Initializable {
 
-    @FXML
-    private TableColumn<?, ?> ColAuthor;
-
-    @FXML
-    private TableColumn<?, ?> ColBookID;
-
-    @FXML
-    private TableColumn<?, ?> ColBookName;
+    AllBooksController allBooksController = new AllBooksController();
 
     @FXML
-    private TableColumn<?, ?> ColCategory;
+    private TableColumn<Map<String, String>, String> ColAuthor;
 
     @FXML
-    private TableColumn<?, ?> ColPublishedYear;
+    private TableColumn<Map<String, String>, String> ColBookID;
 
     @FXML
-    private TableColumn<?, ?> ColQuantity;
+    private TableColumn<Map<String, String>, String> ColBookName;
+
+    @FXML
+    private TableColumn<Map<String, String>, String> ColCategory;
+
+    @FXML
+    private TableColumn<Map<String, String>, String> ColPublishedYear;
+
+    @FXML
+    private TableColumn<Map<String, String>, String> ColQuantity;
 
     @FXML
     private Button btnAddBook;
@@ -55,13 +64,15 @@ public class AllBooksPageController {
     private Button btnMembers;
 
     @FXML
-    private Button btnSearcBook;
+    private Button btnSearchBook;
 
     @FXML
-    private TableView<?> tblAllBooks;
+    private TableView<Map<String, String>> tblAllBooks;
 
     @FXML
     private TextField txtSearchBook;
+
+    private ObservableList<Map<String, String>> masterBookList = FXCollections.observableArrayList();
 
     @FXML
     void btnAddBookOnAction(ActionEvent event) {
@@ -171,9 +182,31 @@ public class AllBooksPageController {
     }
 
     @FXML
-    void btnSearcBookOnAction(ActionEvent event) {
+    void btnSearchBookOnAction(ActionEvent event) {
 
     }
 
+    public  void initiableColumns(){
+        ColBookID.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("book_id","")));
+        ColBookName.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("Book_name", "")));
+        ColAuthor.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("author", "")));
+        ColCategory.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("category","")));
+        ColQuantity.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("quantity", "")));
+        ColPublishedYear.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("published_year", "")));
+
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initiableColumns();
+        loadBooks();
+    }
+
+    private void loadBooks() {
+        ObservableList<Map<String, String>> bookFromDB = AllBooksController.getAllBooks();
+        masterBookList.setAll(bookFromDB);
+        tblAllBooks.setItems(masterBookList);
+    }
 }
 
