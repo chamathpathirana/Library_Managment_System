@@ -66,7 +66,7 @@ public class AddBookPageController implements Initializable {
     void btnExitOnAction(ActionEvent event) {
         Stage stage = new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/books_page.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -115,5 +115,8 @@ public class homepageController {
         }
         stage.show();
 
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+
     }
 }

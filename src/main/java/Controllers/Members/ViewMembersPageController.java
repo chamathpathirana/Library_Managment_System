@@ -48,7 +48,7 @@ public class ViewMembersPageController implements Initializable {
     private Button btnBooks;
 
     @FXML
-    private Button btnExit;
+    private Button btnLogOut;
 
     @FXML
     private Button btnHome;
@@ -57,10 +57,16 @@ public class ViewMembersPageController implements Initializable {
     private Button btnMembers;
 
     @FXML
-    private Button btnSearch;
+    private Button btnMemberSearch;
 
     @FXML
     private TextField txtSearchMember;
+
+    @FXML
+    private Button btnAllBooks;
+
+    @FXML
+    private Button btnBorrowHist;
 
     private ObservableList<Map<String, String>> masterMemberList = FXCollections.observableArrayList();
 
@@ -95,20 +101,7 @@ public class ViewMembersPageController implements Initializable {
 
     }
 
-    @FXML
-    void btnExitOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
 
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
-
-    }
 
     @FXML
     void btnHomeOnAction(ActionEvent event) {
@@ -142,10 +135,7 @@ public class ViewMembersPageController implements Initializable {
 
     }
 
-    @FXML
-    void btnSearchOnAction(ActionEvent event) {
 
-    }
 
     public void initializeColumns(){
         colMemberID.setCellValueFactory(cell -> new SimpleStringProperty(cell.getValue().getOrDefault("member_id", "" )));
@@ -167,5 +157,50 @@ public class ViewMembersPageController implements Initializable {
         ObservableList<Map<String, String>> MemberFromDb = ViewMemberController.getAllMembers();
         masterMemberList.setAll(MemberFromDb);
         tblMembers.setItems(masterMemberList);
+    }
+
+    public void btnMemberSearchOnAction(ActionEvent actionEvent) {
+
+    }
+
+    public void btnBorrowHistOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/BorrowingHist_Page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+    }
+
+    public void btnAllBooksOnAction(ActionEvent actionEvent) {
+         Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AllBooks_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+
+    }
+
+    public void btnLogOutOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
+
     }
 }

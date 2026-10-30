@@ -1,77 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="542.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.ViewMembersPageController">
+<AnchorPane prefHeight="665.0" prefWidth="1072.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.ViewMembersPageController">
    <children>
-      <VBox prefHeight="546.0" prefWidth="175.0" style="-fx-background-color: #6D6875;">
+      <VBox layoutY="53.0" prefHeight="599.0" prefWidth="190.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css">
          <children>
-            <Label prefHeight="0.0" prefWidth="190.0" text="Library">
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="26.0" prefWidth="64.0" styleClass="sidebar-button" text="Home">
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="-4.0" right="1.0" top="6.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-home-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnMembers" layoutX="10.0" layoutY="59.0" mnemonicParsing="false" onAction="#btnMembersOnAction" prefHeight="26.0" prefWidth="64.0" styleClass="sidebar-button" text="Members">
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="-4.0" right="1.0" top="19.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-member-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnBooks" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnBooksOnAction" prefHeight="26.0" prefWidth="64.0" styleClass="sidebar-button" text="Books">
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="-4.0" right="1.0" top="18.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-book-50%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnAllBooks" mnemonicParsing="false" onAction="#btnAllBooksOnAction" prefHeight="26.0" prefWidth="64.0" styleClass="sidebar-button" text="All Books">
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="-4.0" right="1.0" top="18.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-document-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnBorrowHist" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#btnBorrowHistOnAction" prefHeight="26.0" prefWidth="64.0" styleClass="sidebar-button" text="Borrow History">
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="-4.0" right="1.0" top="18.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-time-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnLogOut" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="26.0" prefWidth="63.0" styleClass="sidebar-button" text="Log Out">
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="-4.0" right="1.0" top="18.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-logout-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="116.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/original_sidebar_books_plant.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="-5.0" left="12.0" top="11.0" />
+               </VBox.margin>
+            </ImageView>
+            <Text fill="#dfd9d9" strokeType="OUTSIDE" strokeWidth="0.0" text="Read more Glow more" wrappingWidth="77.35702514648438">
                <font>
-                  <Font name="System Bold" size="28.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
-               <padding>
-                  <Insets bottom="1.0" left="42.0" top="8.0" />
-               </padding>
-            </Label>
-            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="26.0" prefWidth="64.0" text="Home">
                <VBox.margin>
-                  <Insets left="49.0" top="21.0" />
+                  <Insets left="32.0" top="23.0" />
                </VBox.margin>
-            </Button>
-            <Button fx:id="btnMembers" layoutX="10.0" layoutY="59.0" mnemonicParsing="false" onAction="#btnMembersOnAction" text="Members">
-               <VBox.margin>
-                  <Insets left="47.0" top="22.0" />
-               </VBox.margin>
-            </Button>
-            <Button fx:id="btnBooks" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" onAction="#btnBooksOnAction" prefHeight="26.0" prefWidth="68.0" text="Books">
-               <VBox.margin>
-                  <Insets left="46.0" top="28.0" />
-               </VBox.margin>
-            </Button>
-            <Button fx:id="btnExit" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="26.0" prefWidth="68.0" text="Exit">
-               <VBox.margin>
-                  <Insets left="46.0" top="26.0" />
-               </VBox.margin>
-            </Button>
+            </Text>
          </children>
       </VBox>
-      <Label alignment="CENTER" layoutX="175.0" prefHeight="74.0" prefWidth="510.0" style="-fx-background-color: #F3722C;" text="Library Members" textFill="#faf5f5">
-         <font>
-            <Font name="System Bold" size="29.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtSearchMember" layoutX="190.0" layoutY="98.0" prefHeight="26.0" prefWidth="175.0" promptText="Search Member">
+      <TextField fx:id="txtSearchMember" layoutX="222.0" layoutY="98.0" prefHeight="26.0" prefWidth="175.0" promptText="Search Member" stylesheets="@css/table.css">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <Button fx:id="btnSearch" layoutX="365.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnSearchOnAction" style="-fx-background-color: #212529;" text="Search" textFill="#f7f3f3">
+      <Button fx:id="btnMemberSearch" layoutX="398.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnMemberSearchOnAction" styleClass="search-button" stylesheets="@css/table.css" text="Search" textFill="#f7f3f3">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="btnAddMember" layoutX="546.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnAddMemberOnAction" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #4895EF;" text="+ Add Members" textFill="#f4efef">
+      <Button fx:id="btnAddMember" layoutX="832.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnAddMemberOnAction" prefHeight="26.0" prefWidth="158.0" stylesheets="@css/bookpage.css" text="+ Add Members" textFill="#f4efef">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <styleClass>
+            <String fx:value="add-book-button" />
+            <String fx:value="book-button" />
+         </styleClass>
       </Button>
-      <TableView fx:id="tblMembers" layoutX="175.0" layoutY="168.0" prefHeight="378.0" prefWidth="510.0" AnchorPane.topAnchor="168.0">
+      <TableView fx:id="tblMembers" layoutX="205.0" layoutY="167.0" prefHeight="486.0" prefWidth="854.0" stylesheets="@css/table.css" AnchorPane.topAnchor="167.0">
         <columns>
-          <TableColumn fx:id="colMemberID" prefWidth="100.0" text="Member Id" />
-          <TableColumn fx:id="colMemberName" prefWidth="90.0" sortType="DESCENDING" text="Name" />
-            <TableColumn fx:id="colMemberEmail" prefWidth="110.0" sortType="DESCENDING" text="Email" />
-            <TableColumn fx:id="colMemberPhNumber" prefWidth="90.0" sortType="DESCENDING" text="Phone No" />
-            <TableColumn fx:id="colMemberAddress" prefWidth="110.0" sortType="DESCENDING" text="Address" />
+          <TableColumn fx:id="colMemberID" prefWidth="152.0" text="Member Id" />
+          <TableColumn fx:id="colMemberName" prefWidth="157.0" sortType="DESCENDING" text="Name" />
+            <TableColumn fx:id="colMemberEmail" prefWidth="226.0" sortType="DESCENDING" text="Email" />
+            <TableColumn fx:id="colMemberPhNumber" prefWidth="148.0" sortType="DESCENDING" text="Phone No" />
+            <TableColumn fx:id="colMemberAddress" prefWidth="167.0" sortType="DESCENDING" text="Address" />
         </columns>
+         <styleClass>
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-cell" />
+         </styleClass>
       </TableView>
+      <Label prefHeight="54.0" prefWidth="1072.0" style="-fx-background-color: #F3722C;" text="           Library Management System" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-library-50.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AllBooksController {
-   static Connection connection = dbConnection.getInstance().getConnection();
+    static Connection connection = dbConnection.getInstance().getConnection();
 
 
     public static ObservableList<Map<String, String>> getAllBooks(){
@@ -28,7 +28,7 @@ public class AllBooksController {
                 Map<String, String> row = new HashMap<>();
 
                 row.put("book_id", resultSet.getString("book_id") != null ? resultSet.getString("book_id") : "");
-                row.put("book_name", resultSet.getString("Book_name") != null ? resultSet.getString("Book_name") : "");
+                row.put("Book_name", resultSet.getString("Book_name") != null ? resultSet.getString("Book_name") : "");
                 row.put("author", resultSet.getString("author") != null ? resultSet.getString("author") : "");
                 row.put("category", resultSet.getString("category") != null ? resultSet.getString("category") : "");
                 row.put("quantity", resultSet.getString("quantity") != null ? resultSet.getString("quantity") : "");

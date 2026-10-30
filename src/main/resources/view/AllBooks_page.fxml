@@ -17,22 +17,26 @@
 
 <AnchorPane prefHeight="629.0" prefWidth="1045.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.ViewAllBooks.AllBooksPageController">
    <children>
-      <TableView fx:id="tblAllBooks" layoutX="204.0" layoutY="201.0" prefHeight="395.0" prefWidth="819.0">
+      <TableView fx:id="tblAllBooks" layoutX="202.0" layoutY="192.0" prefHeight="498.0" prefWidth="856.0" stylesheets="@css/table.css">
         <columns>
-          <TableColumn fx:id="ColBookID" minWidth="11.0" prefWidth="135.79995441436768" text="Book_id" />
-          <TableColumn fx:id="ColBookName" prefWidth="135.79995441436768" text="Book_Name" />
-            <TableColumn fx:id="ColAuthor" prefWidth="135.79995441436768" text="Author" />
-            <TableColumn fx:id="ColCategory" prefWidth="135.79995441436768" text="Category" />
-            <TableColumn fx:id="ColQuantity" prefWidth="135.79995441436768" text="Quantity" />
-            <TableColumn fx:id="ColPublishedYear" prefWidth="135.79995441436768" text="Published_Year" />
+          <TableColumn fx:id="ColBookID" minWidth="11.0" prefWidth="148.80003356933594" text="Book_id" />
+          <TableColumn fx:id="ColBookName" prefWidth="147.80003356933594" text="Book_Name" />
+            <TableColumn fx:id="ColAuthor" prefWidth="147.80003356933594" text="Author" />
+            <TableColumn fx:id="ColCategory" prefWidth="142.79998779296875" text="Category" />
+            <TableColumn fx:id="ColQuantity" prefWidth="135.9998779296875" text="Quantity" />
+            <TableColumn fx:id="ColPublishedYear" prefWidth="129.60003662109375" text="Published_Year" />
         </columns>
+         <styleClass>
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-cell" />
+         </styleClass>
       </TableView>
       <Label prefHeight="54.0" prefWidth="1072.0" style="-fx-background-color: #F3722C;" text="           Library Management System" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <VBox layoutX="-6.0" layoutY="54.0" prefHeight="578.0" prefWidth="182.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css">
+      <VBox layoutX="-6.0" layoutY="54.0" prefHeight="651.0" prefWidth="200.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css">
          <children>
             <Button fx:id="btnHome" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="38.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="42.0" prefWidth="130.0" styleClass="sidebar-button" text="Home">
                <VBox.margin>
@@ -85,9 +89,9 @@
                   <Insets bottom="21.0" left="15.0" right="15.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnExit" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="26.0" prefWidth="68.0" styleClass="sidebar-button" text="Exit">
+            <Button fx:id="btnBorrowHist" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" onAction="#btnBorrowHistOnAction" prefHeight="26.0" prefWidth="68.0" styleClass="sidebar-button" text="Borrow History">
                <VBox.margin>
-                  <Insets bottom="21.0" left="15.0" right="15.0" />
+                  <Insets bottom="21.0" left="12.0" right="-2.0" />
                </VBox.margin>
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
@@ -132,9 +136,9 @@
             <Image url="@../img/icons8-library-50.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnSearchBook" layoutX="396.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnSearchBookOnAction" prefHeight="30.0" prefWidth="92.0" text="Search" />
-      <TextField fx:id="txtSearchBook" layoutX="222.0" layoutY="109.0" prefHeight="31.0" prefWidth="173.0" promptText="Search Book" />
-      <Button fx:id="btnAddBook" layoutX="840.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="31.0" prefWidth="144.0" stylesheets="@css/bookpage.css" text="+ Add Book" textFill="#26c8f4">
+      <Button fx:id="btnSearchBook" layoutX="396.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnSearchBookOnAction" prefHeight="30.0" prefWidth="92.0" styleClass="search-button" stylesheets="@css/table.css" text="Search" />
+      <TextField fx:id="txtSearchBook" layoutX="222.0" layoutY="109.0" prefHeight="31.0" prefWidth="173.0" promptText="Search Book" styleClass="text-field" stylesheets="@css/table.css" />
+      <Button fx:id="btnAddBook" layoutX="862.0" layoutY="105.0" mnemonicParsing="false" onAction="#btnAddBookOnAction" prefHeight="43.0" prefWidth="158.0" stylesheets="@css/bookpage.css" text="+ Add Book" textFill="#26c8f4">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

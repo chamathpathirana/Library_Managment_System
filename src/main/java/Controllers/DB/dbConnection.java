@@ -11,7 +11,6 @@ public class dbConnection {
 
     public static Connection getConnection(){
 
-
         {
             try {
                 connection = DriverManager.getConnection(

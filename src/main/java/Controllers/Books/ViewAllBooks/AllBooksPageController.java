@@ -51,8 +51,9 @@ public class AllBooksPageController implements Initializable {
     @FXML
     private Button btnBooks;
 
+
     @FXML
-    private Button btnExit;
+    private Button btnBorrowHist;
 
     @FXML
     private Button btnHome;
@@ -121,20 +122,6 @@ public class AllBooksPageController implements Initializable {
 
     }
 
-    @FXML
-    void btnExitOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
-
-    }
 
     @FXML
     void btnHomeOnAction(ActionEvent event) {
@@ -207,6 +194,19 @@ public class AllBooksPageController implements Initializable {
         ObservableList<Map<String, String>> bookFromDB = AllBooksController.getAllBooks();
         masterBookList.setAll(bookFromDB);
         tblAllBooks.setItems(masterBookList);
+    }
+
+    public void btnBorrowHistOnAction(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/BorrowingHist_Page.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+
+        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        errorStage.close();
     }
 }
 
