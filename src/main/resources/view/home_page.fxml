@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -11,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="648.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Home.homepageController">
+<AnchorPane prefHeight="648.0" prefWidth="992.0" styleClass="main-background" stylesheets="@css/HomeBackground.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Home.homepageController">
    <children>
-      <VBox layoutY="54.4" prefHeight="595.0" prefWidth="194.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css" AnchorPane.bottomAnchor="-1.0" AnchorPane.topAnchor="54.0">
+      <VBox layoutY="40.0" prefHeight="609.0" prefWidth="194.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css" AnchorPane.bottomAnchor="-1.0" AnchorPane.topAnchor="40.0">
          <children>
             <Button fx:id="btnHome" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="42.0" prefWidth="149.0" styleClass="sidebar-button" text="Home">
                <VBox.margin>
@@ -105,20 +107,174 @@
             </Text>
          </children>
       </VBox>
-      <HBox layoutX="178.0" layoutY="94.0" prefHeight="98.0" prefWidth="186.0" />
-      <HBox layoutX="204.0" layoutY="156.0" prefHeight="122.0" prefWidth="186.0" styleClass="card" stylesheets="@css/style2.css" />
-      <HBox layoutX="446.0" layoutY="156.0" prefHeight="122.0" prefWidth="186.0" styleClass="card" stylesheets="@css/style2.css" />
-      <HBox layoutX="204.0" layoutY="326.0" prefHeight="122.0" prefWidth="186.0" styleClass="card" stylesheets="@css/style2.css" />
-      <HBox layoutX="446.0" layoutY="326.0" prefHeight="122.0" prefWidth="186.0" styleClass="card" stylesheets="@css/style2.css" />
-      <Label prefHeight="54.0" prefWidth="1033.0" style="-fx-background-color: #F3722C;" text="         Library Management System" textFill="WHITE">
+      <Label prefHeight="42.0" prefWidth="1002.0" style="-fx-background-color: #F3722C;" text="         Library Management System" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-library-50.png" />
          </image>
       </ImageView>
+      <HBox layoutX="235.0" layoutY="203.0" prefHeight="162.0" prefWidth="286.0">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/group.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fill="#2d84b9" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+               <HBox.margin>
+                  <Insets left="48.0" top="56.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+            <Text fill="#00487b" strokeType="OUTSIDE" strokeWidth="0.0" text="Members" wrappingWidth="119.712646484375">
+               <HBox.margin>
+                  <Insets left="-67.0" top="16.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+         </children>
+         <stylesheets>
+            <URL value="@css/style2.css" />
+            <URL value="@css/HomeCards.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="card" />
+            <String fx:value="total-books-card" />
+         </styleClass>
+      </HBox>
+      <HBox layoutX="570.0" layoutY="203.0" prefHeight="162.0" prefWidth="286.0">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/book.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="11.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fill="#196e2c" layoutX="123.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="119.712646484375">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="37.0" top="50.0" />
+               </HBox.margin>
+            </Text>
+            <Text fill="#196e2c" strokeType="OUTSIDE" strokeWidth="0.0" text="Books" wrappingWidth="119.712646484375">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-132.0" right="-26.0" top="14.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <stylesheets>
+            <URL value="@css/style2.css" />
+            <URL value="@css/HomeCards.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="card" />
+            <String fx:value="members-card" />
+         </styleClass>
+      </HBox>
+      <Text fill="#211c69" layoutX="223.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to" wrappingWidth="254.13671875" AnchorPane.leftAnchor="223.0" AnchorPane.topAnchor="70.6552734375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#232f6b" layoutX="223.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management System" wrappingWidth="374.9366760253906" AnchorPane.topAnchor="89.943359375">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Text fill="#1f3784" layoutX="223.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Knowledge is the key to a better future....." wrappingWidth="329.33673095703125" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="129.576171875">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Text>
+      <HBox layoutX="235.0" layoutY="387.0" prefHeight="162.0" prefWidth="286.0">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/return_book.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="11.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fill="#c78b3e" layoutX="123.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="119.712646484375">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="37.0" top="50.0" />
+               </HBox.margin>
+            </Text>
+            <Text fill="#bf7547" strokeType="OUTSIDE" strokeWidth="0.0" text="Overdue Books" wrappingWidth="174.91265869140625">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-145.0" right="-26.0" top="14.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <stylesheets>
+            <URL value="@css/style2.css" />
+            <URL value="@css/HomeCards.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="card" />
+            <String fx:value="overdue-card" />
+         </styleClass>
+      </HBox>
+      <HBox layoutX="570.0" layoutY="387.0" prefHeight="162.0" prefWidth="286.0">
+         <children>
+            <ImageView fitHeight="81.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/borrow_history.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="-5.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fill="#aa58b1" layoutX="123.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="119.712646484375">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="43.0" top="60.0" />
+               </HBox.margin>
+            </Text>
+            <Text fill="#8e22a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Curruntly Borrow Book" wrappingWidth="164.5126953125">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-144.0" right="-26.0" top="-3.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <stylesheets>
+            <URL value="@css/style2.css" />
+            <URL value="@css/HomeCards.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="card" />
+            <String fx:value="borrow-card" />
+         </styleClass>
+      </HBox>
    </children>
 </AnchorPane>
