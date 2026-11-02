@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="542.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.IssueBook.issueBookPage">
+<AnchorPane prefHeight="542.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.IssueBook.issueBookPage">
    <children>
-      <Label alignment="CENTER" prefHeight="66.0" prefWidth="415.0" style="-fx-background-color: #F3722C;" text="Issue Books" textFill="#f4efef">
+      <Label alignment="CENTER" prefHeight="66.0" prefWidth="703.0" style="-fx-background-color: #F3722C;" text="Issue Books" textFill="#f4efef">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
@@ -20,7 +19,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="44.0" layoutY="182.0" prefHeight="26.0" prefWidth="122.0" text="Select Books :">
+      <Label layoutX="44.0" layoutY="182.0" prefHeight="26.0" prefWidth="122.0" text="Select Book :">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -35,10 +34,10 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="44.0" layoutY="129.0" prefHeight="26.0" prefWidth="188.0" />
-      <TextField layoutX="44.0" layoutY="208.0" prefHeight="26.0" prefWidth="188.0" />
-      <DatePicker layoutX="44.0" layoutY="284.0" prefHeight="26.0" prefWidth="188.0" />
-      <DatePicker layoutX="44.0" layoutY="363.0" prefHeight="26.0" prefWidth="188.0" />
+      <TextField fx:id="txtMembername" layoutX="44.0" layoutY="129.0" prefHeight="26.0" prefWidth="188.0" />
+      <TextField fx:id="txtBookName" layoutX="44.0" layoutY="208.0" prefHeight="26.0" prefWidth="188.0" />
+      <DatePicker fx:id="txtIssueDate" layoutX="44.0" layoutY="284.0" prefHeight="26.0" prefWidth="188.0" />
+      <DatePicker fx:id="txtDueDate" layoutX="44.0" layoutY="363.0" prefHeight="26.0" prefWidth="188.0" />
       <Button fx:id="btnExit" layoutX="223.0" layoutY="449.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #FFCAD4;" text="Exit" textFill="#ec0a0a">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -49,5 +48,19 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <Button fx:id="btnGetMemberID" layoutX="480.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnGetMemberIDOnAction" text="Get Member Id" />
+      <TextField fx:id="txtMmeberID" layoutX="292.0" layoutY="129.0" prefHeight="26.0" prefWidth="188.0" />
+      <Label layoutX="290.0" layoutY="103.0" prefHeight="26.0" prefWidth="122.0" text="Member ID :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookID" layoutX="292.0" layoutY="208.0" prefHeight="26.0" prefWidth="188.0" />
+      <Label layoutX="290.0" layoutY="182.0" prefHeight="26.0" prefWidth="122.0" text=" Book ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGetBookId" layoutX="480.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnGetBookIdOnAction" text="Get Book id" />
    </children>
 </AnchorPane>

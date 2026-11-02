@@ -1,35 +1,54 @@
 package Controllers.Books.IssueBook;
 
+import Controllers.Scean.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
 
-import java.io.IOException;
+import javafx.scene.control.Button;
+
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+
+
 
 public class issueBookPage {
+    IssueBookController issueBookController = new IssueBookController();
+
+
 
     @FXML
     private Button btnExit;
 
     @FXML
+    private Button btnGotBookId;
+
+    @FXML
     private Button btnIssueBooks;
 
     @FXML
-    void btnExitOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/books_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+    private Button btnMemberID;
 
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+    @FXML
+    private TextField txtBookID;
+
+    @FXML
+    private TextField txtBookName;
+
+    @FXML
+    private DatePicker txtDueDate;
+
+    @FXML
+    private DatePicker txtIssueDate;
+
+    @FXML
+    private TextField txtMembername;
+
+    @FXML
+    private TextField txtMmeberID;
+
+    @FXML
+    void btnExitOnAction(ActionEvent event) {
+        SceneManager.switchPage("/view/books_page.fxml");
 
     }
 
@@ -38,4 +57,11 @@ public class issueBookPage {
 
     }
 
+
+    public void btnGetBookIdOnAction(ActionEvent actionEvent) {
+
+    }
+
+    public void btnGetMemberIDOnAction(ActionEvent actionEvent) {
+    }
 }
