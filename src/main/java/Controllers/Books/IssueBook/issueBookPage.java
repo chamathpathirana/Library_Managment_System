@@ -10,27 +10,30 @@ import javafx.scene.control.Button;
 
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
 public class issueBookPage implements Initializable {
+
     IssueBookController issueBookController = new IssueBookController();
 
-
+    @FXML
+    public Text txtissueID;
 
     @FXML
     private Button btnExit;
 
     @FXML
-    private Button btnGotBookId;
+    private Button btnGetBookId;
+
+    @FXML
+    private Button btnGetMemberID;
 
     @FXML
     private Button btnIssueBooks;
-
-    @FXML
-    private Button btnMemberID;
 
     @FXML
     private TextField txtBookID;
@@ -58,6 +61,14 @@ public class issueBookPage implements Initializable {
 
     @FXML
     void btnIssueBooksOnAction(ActionEvent event) {
+        issueBookController.issueBooks(
+                issueBookController.genarateIssueBookId(),
+                txtMmeberID.getText(),
+                txtBookID.getText(),
+                txtIssueDate.getValue(),
+                txtDueDate.getValue()
+        );
+
 
     }
 
@@ -69,11 +80,8 @@ public class issueBookPage implements Initializable {
             txtBookID.setText(bookId);
 
         }else {
-            System.out.println("tho waradi hutto pala ponnaya");
+            System.out.println("Vradiy ykoo");
         }
-
-
-
 
     }
 
@@ -83,12 +91,8 @@ public class issueBookPage implements Initializable {
         if (memberId != null){
             txtMmeberID.setText(memberId);
         }else {
-
             System.out.println("wadada huuto");
             txtMmeberID.clear();
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("pakaya");
-            alert.setContentText("palayn hutto yanna");
         }
 
     }
@@ -97,5 +101,7 @@ public class issueBookPage implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         txtBookID.setEditable(false);
         txtMmeberID.setEditable(false);
+
+        txtissueID.setText("your id is : " + issueBookController.genarateIssueBookId());
     }
 }

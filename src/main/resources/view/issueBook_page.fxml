@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="542.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.IssueBook.issueBookPage">
    <children>
@@ -62,5 +63,6 @@
          </font>
       </Label>
       <Button fx:id="btnGetBookId" layoutX="480.0" layoutY="208.0" mnemonicParsing="false" onAction="#btnGetBookIdOnAction" text="Get Book id" />
+      <Text fx:id="txtissueID" layoutX="369.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="188.0" />
    </children>
 </AnchorPane>
