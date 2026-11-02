@@ -1,5 +1,6 @@
 package Controllers.Books.AddBook;
 
+import Controllers.Scean.SceneManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -64,17 +65,7 @@ public class AddBookPageController implements Initializable {
     }
     @FXML
     void btnExitOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
-
+        SceneManager.switchPage("/view/home_page.fxml");
     }
 
     @Override
@@ -88,6 +79,8 @@ public class AddBookPageController implements Initializable {
         cmbList.add("Fantasy");
         cmbList.add("Childern");
         cmbList.add("18 Plus");
+        cmbList.add("Computer Scienece");
+        cmbList.add("Programming");
 
         txtCategory.setItems(cmbList);
     }

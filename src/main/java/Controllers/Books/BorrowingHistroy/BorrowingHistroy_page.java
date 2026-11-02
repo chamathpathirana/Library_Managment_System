@@ -1,5 +1,6 @@
 package Controllers.Books.BorrowingHistroy;
 
+import Controllers.Scean.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,16 +18,7 @@ public class BorrowingHistroy_page {
 
     @FXML
     void btnBackOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/books_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/books_page.fxml");
 
     }
 

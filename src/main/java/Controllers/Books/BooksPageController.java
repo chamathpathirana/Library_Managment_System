@@ -1,5 +1,6 @@
 package Controllers.Books;
 
+import Controllers.Scean.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -45,109 +46,44 @@ public class BooksPageController {
 
     @FXML
     void btnBooksOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/books_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/books_page.fxml");
 
 
     }
 
     @FXML
     void btnBorrowOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/BorrowingHist_Page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/BorrowingHist_Page.fxml");
 
     }
 
     @FXML
     void btnExitOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/home_page.fxml");
 
     }
 
     @FXML
     void btnIssueBookOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/issueBook_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/issueBook_page.fxml");
 
     }
 
     @FXML
     void btnMemberOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ViewMembers_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/ViewMembers_page.fxml");
 
     }
 
     @FXML
     void btnReturnBookOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/RetrunBook_Page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/RetrunBook_Page.fxml");
 
     }
 
     @FXML
     void btnHomeOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
-
+        SceneManager.switchPage("/view/home_page.fxml");
     }
 
 
@@ -155,46 +91,17 @@ public class BooksPageController {
 
 
     public void btnAddBookOnAction(ActionEvent actionEvent) {
-        System.out.println("chamath");
-        Stage  stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AddBook_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
+       SceneManager.switchPage("/view/AddBook_page.fxml");
     }
 
     public void btnLogoutOnAction(ActionEvent actionEvent) {
-        Stage stage = new Stage();
-
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/login_page.fxml");
 
 
     }
 
     public void btnAllBooksOnAction(ActionEvent actionEvent) {
-      Stage stage= new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Allbooks_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/AllBooks_page.fxml");
 
     }
 }

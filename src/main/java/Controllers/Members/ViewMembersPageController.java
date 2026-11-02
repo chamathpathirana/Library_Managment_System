@@ -1,5 +1,6 @@
 package Controllers.Members;
 
+import Controllers.Scean.SceneManager;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +23,8 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 public class ViewMembersPageController implements Initializable {
+
+    ViewMemberController viewMemberController = new ViewMemberController();
 
     @FXML
     private TableColumn<Map<String, String>, String> colMemberAddress;
@@ -72,32 +75,13 @@ public class ViewMembersPageController implements Initializable {
 
     @FXML
     void btnAddMemberOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AddMembers_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
-
+        SceneManager.switchPage("/view/AddMembers_page.fxml");
 
     }
 
     @FXML
     void btnBooksOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/books_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/books_page.fxml");
 
     }
 
@@ -105,32 +89,14 @@ public class ViewMembersPageController implements Initializable {
 
     @FXML
     void btnHomeOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/home_page.fxml");
 
 
     }
 
     @FXML
     void btnMembersOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/ViewMembers_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/ViewMembers_page.fxml");
 
 
     }
@@ -154,7 +120,7 @@ public class ViewMembersPageController implements Initializable {
     }
 
     private void loadMember() {
-        ObservableList<Map<String, String>> MemberFromDb = ViewMemberController.getAllMembers();
+        ObservableList<Map<String, String>> MemberFromDb = viewMemberController.getAllMembers();
         masterMemberList.setAll(MemberFromDb);
         tblMembers.setItems(masterMemberList);
     }
@@ -164,43 +130,16 @@ public class ViewMembersPageController implements Initializable {
     }
 
     public void btnBorrowHistOnAction(ActionEvent actionEvent) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/BorrowingHist_Page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/BorrowingHist_Page.fxml");
     }
 
     public void btnAllBooksOnAction(ActionEvent actionEvent) {
-         Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/AllBooks_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/AllBooks_page.fxml");
 
     }
 
     public void btnLogOutOnAction(ActionEvent actionEvent) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/login_page.fxml");
 
     }
 }

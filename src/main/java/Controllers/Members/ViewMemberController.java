@@ -13,9 +13,9 @@ import java.util.Map;
 
 public class ViewMemberController {
 
-    static Connection connection = dbConnection.getInstance().getConnection();
+     Connection connection = dbConnection.getInstance().getConnection();
 
-    public static ObservableList<Map<String, String>> getAllMembers(){
+    public  ObservableList<Map<String, String>> getAllMembers(){
         ObservableList<Map<String, String>> MemberList = FXCollections.observableArrayList();
         String sql = "SELECT * FROM members ORDER BY member_id ASC";
 

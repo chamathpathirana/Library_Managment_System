@@ -13,10 +13,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AllBooksController {
-    static Connection connection = dbConnection.getInstance().getConnection();
+    Connection connection = dbConnection.getInstance().getConnection();
 
 
-    public static ObservableList<Map<String, String>> getAllBooks(){
+    public ObservableList<Map<String, String>> getAllBooks(){
         ObservableList<Map<String, String>> BookList = FXCollections.observableArrayList();
         String sql = "SELECT * FROM books ORDER BY book_id ASC";
 

@@ -1,5 +1,6 @@
 package Controllers.Login;
 
+import Controllers.Scean.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,16 +11,6 @@ import java.io.IOException;
 
 public class LoginerrorController {
     public void btnOkOnAction(ActionEvent actionEvent) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        errorStage.close();
-
+        SceneManager.switchPage("/view/login_page.fxml");
     }
 }
