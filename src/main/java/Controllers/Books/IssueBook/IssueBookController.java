@@ -52,7 +52,8 @@ public class IssueBookController {
 
     public String genarateIssueBookId() {
         String SQL = """
-                SELECT MAX(CAST(SUBSTRING(issue_id, 3) AS UNSIGNED)) FROM issueBook WHERE issue_id REGEXP '^IB[0-9]+$'""";
+               
+               SELECT MAX(CAST(SUBSTRING(issue_id, 3) AS UNSIGNED)) FROM issueBook WHERE issue_id REGEXP '^IB[0-9]+$'""";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);

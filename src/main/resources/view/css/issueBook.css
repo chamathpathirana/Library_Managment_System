@@ -1,0 +1,95 @@
+
+/* TextField - Member ID, Book ID, Member Name, Book Name */
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C8D2E3;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+    -fx-padding: 5px 14px;
+    -fx-font-size: 15px;
+    -fx-text-fill: #172B4D;
+    -fx-prompt-text-fill: #858B98;
+}
+
+.text-field:focused {
+    -fx-border-color: #FF861F;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(255,134,31,0.18), 7, 0, 0, 1);
+}
+
+
+/* Get ID Buttons */
+.get-id-button {
+    -fx-background-color: linear-gradient(to bottom, #FFF3E6, #FFE0BD);
+    -fx-border-color: #FFAC5C;
+    -fx-border-width: 1.3px;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+    -fx-text-fill: #713A0B;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 16px;
+    -fx-cursor: hand;
+}
+
+.get-id-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFE1BC, #FFC987);
+    -fx-border-color: #FF861F;
+}
+
+.get-id-button:pressed {
+    -fx-background-color: #F9B66F;
+}
+
+
+/* Issue Book Button */
+.issue-button {
+    -fx-background-color: linear-gradient(to bottom, #FF9A3C, #F47716);
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #E96A0B;
+    -fx-border-width: 1px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 28px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(244,119,22,0.25), 8, 0, 0, 3);
+}
+
+.issue-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #FFB15F, #FF8A25);
+    -fx-effect: dropshadow(gaussian, rgba(244,119,22,0.35), 10, 0, 0, 4);
+}
+
+.issue-button:pressed {
+    -fx-background-color: #E96A0B;
+    -fx-translate-y: 1px;
+}
+
+
+/* Exit Button */
+.exit-button {
+    -fx-background-color: linear-gradient(to bottom, #FFF0F0, #FFD9D9);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #F5A5A5;
+    -fx-border-width: 1.2px;
+    -fx-text-fill: #C62828;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 28px;
+    -fx-cursor: hand;
+}
+
+.exit-button:hover {
+    -fx-background-color: #FFC5C5;
+    -fx-border-color: #E57373;
+}
+
+.exit-button:pressed {
+    -fx-background-color: #F3A5A5;
+}
+
+

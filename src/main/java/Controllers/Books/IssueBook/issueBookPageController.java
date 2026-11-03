@@ -5,23 +5,22 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class issueBookPage implements Initializable {
+public class issueBookPageController implements Initializable {
 
     IssueBookController issueBookController = new IssueBookController();
 
     @FXML
-    public Text txtissueID;
+    public TextField txtissueId;
 
     @FXML
     private Button btnExit;
@@ -54,6 +53,26 @@ public class issueBookPage implements Initializable {
     private TextField txtMmeberID;
 
     @FXML
+    private Button btnAllBooks;
+
+    @FXML
+    private Button btnBooks;
+
+    @FXML
+    private Button btnBorrowHis;
+
+    @FXML
+    private Button btnHome;
+
+    @FXML
+    private Button btnLogOut;
+
+    @FXML
+    private Button btnMembers;
+
+
+
+    @FXML
     void btnExitOnAction(ActionEvent event) {
         SceneManager.switchPage("/view/books_page.fxml");
 
@@ -68,7 +87,6 @@ public class issueBookPage implements Initializable {
                 txtIssueDate.getValue(),
                 txtDueDate.getValue()
         );
-
 
     }
 
@@ -102,6 +120,30 @@ public class issueBookPage implements Initializable {
         txtBookID.setEditable(false);
         txtMmeberID.setEditable(false);
 
-        txtissueID.setText("your id is : " + issueBookController.genarateIssueBookId());
+        txtissueId.setText("YOUR ID IS : " + issueBookController.genarateIssueBookId());
+    }
+
+    public void btnLogOutOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/login_page.fxml");
+    }
+
+    public void btnBorrowHisOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/BorrowingHist_Page.fxml");
+    }
+
+    public void btnAllBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/AllBooks_page.fxml");
+    }
+
+    public void btnBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/books_page.fxml");
+    }
+
+    public void btnMemberOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/ViewMembers_page.fxml");
+    }
+
+    public void btnHomeOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/home_page.fxml");
     }
 }
