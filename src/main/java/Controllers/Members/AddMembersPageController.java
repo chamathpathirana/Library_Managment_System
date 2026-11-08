@@ -24,6 +24,25 @@ public class AddMembersPageController implements Initializable {
     @FXML
     private Button btnRegister;
 
+    @FXML
+    private Button btnHome;
+
+    @FXML
+    private Button btnLogOut;
+
+    @FXML
+    private Button btnMembers;
+
+
+    @FXML
+    private Button btnAllBooks;
+
+    @FXML
+    private Button btnBooks;
+
+    @FXML
+    private Button btnBorrowHis;
+
 
     @FXML
     private TextField txtAddress;
@@ -65,5 +84,29 @@ public class AddMembersPageController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         txtMemberId.setText(addMemberController.genarateMemberID());
         txtMemberId.setEditable(false);
+    }
+
+    public void btnHomeOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/home_page.fxml");
+    }
+
+    public void btnMemberOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/ViewMembers_page.fxml");
+    }
+
+    public void btnBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/books_page.fxml");
+    }
+
+    public void btnAllBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/AllBooks_page.fxml");
+    }
+
+    public void btnBorrowHisOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/BorrowingHist_Page.fxml");
+    }
+
+    public void btnLogOutOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/login_page.fxml");
     }
 }

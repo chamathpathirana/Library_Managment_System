@@ -98,7 +98,6 @@ public class ViewMembersPageController implements Initializable {
     void btnMembersOnAction(ActionEvent event) {
         SceneManager.switchPage("/view/ViewMembers_page.fxml");
 
-
     }
 
 

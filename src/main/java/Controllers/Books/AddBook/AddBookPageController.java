@@ -32,6 +32,25 @@ public class AddBookPageController implements Initializable {
     private Button btnExit;
 
     @FXML
+    private Button btnHome;
+
+    @FXML
+    private Button btnLogOut;
+
+    @FXML
+    private Button btnMembers;
+
+
+    @FXML
+    private Button btnAllBooks;
+
+    @FXML
+    private Button btnBooks;
+
+    @FXML
+    private Button btnBorrowHis;
+
+    @FXML
     private TextField txtAuthor;
 
     @FXML
@@ -85,13 +104,13 @@ public class AddBookPageController implements Initializable {
         txtCategory.setItems(cmbList);
     }
 
+
     public void btnHomeOnAction(ActionEvent actionEvent) {
         SceneManager.switchPage("/view/home_page.fxml");
     }
 
     public void btnMemberOnAction(ActionEvent actionEvent) {
-        SceneManager.switchPage("/view/AddMembers_page.fxml");
-
+        SceneManager.switchPage("/view/ViewMembers_page.fxml");
     }
 
     public void btnBooksOnAction(ActionEvent actionEvent) {
@@ -102,7 +121,11 @@ public class AddBookPageController implements Initializable {
         SceneManager.switchPage("/view/AllBooks_page.fxml");
     }
 
-    public void btnLogoutOnAction(ActionEvent actionEvent) {
+    public void btnBorrowHisOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/BorrowingHist_Page.fxml");
+    }
+
+    public void btnLogOutOnAction(ActionEvent actionEvent) {
         SceneManager.switchPage("/view/login_page.fxml");
     }
 }
