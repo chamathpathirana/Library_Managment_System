@@ -136,8 +136,8 @@
       </Label>
       <TextField fx:id="txtSearchBook" layoutX="310.0" layoutY="101.0" prefHeight="31.0" prefWidth="173.0" promptText="Search Book" styleClass="text-field" stylesheets="@css/table.css" />
       <Button fx:id="btnSearchBook" layoutX="484.0" layoutY="101.0" mnemonicParsing="false" onAction="#btnSearchBookOnAction" prefHeight="30.0" prefWidth="92.0" styleClass="search-button" stylesheets="@css/table.css" text="Search" />
-      <ComboBox layoutX="677.0" layoutY="101.0" prefHeight="40.0" prefWidth="158.0" promptText="Book ID" />
-      <ComboBox layoutX="899.0" layoutY="101.0" prefHeight="40.0" prefWidth="158.0" promptText="Member ID" />
+      <ComboBox layoutX="677.0" layoutY="101.0" prefHeight="40.0" prefWidth="158.0" promptText="Book ID" stylesheets="@css/combobox.css" />
+      <ComboBox layoutX="899.0" layoutY="101.0" prefHeight="40.0" prefWidth="158.0" promptText="Member ID" stylesheets="@css/combobox.css" />
       <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-library-50.png" />

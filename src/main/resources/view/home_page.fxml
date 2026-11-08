@@ -127,7 +127,7 @@
                   <Insets top="10.0" />
                </HBox.margin>
             </ImageView>
-            <Text fill="#2d84b9" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+            <Text fill="#2d84b9" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
                <HBox.margin>
                   <Insets left="48.0" top="56.0" />
                </HBox.margin>
@@ -163,7 +163,7 @@
                   <Insets top="11.0" />
                </HBox.margin>
             </ImageView>
-            <Text fill="#196e2c" layoutX="123.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" wrappingWidth="119.712646484375">
+            <Text fill="#196e2c" layoutX="123.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" wrappingWidth="119.712646484375">
                <font>
                   <Font name="System Bold" size="40.0" />
                </font>

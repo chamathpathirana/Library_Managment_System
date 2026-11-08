@@ -1,6 +1,7 @@
 package Controllers.Login;
 
 import Controllers.Scean.SceneManager;
+import Controllers.model.LoginDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,9 +16,7 @@ import java.io.IOException;
 
 public class LoginpageController {
 
-
-
-    LoginController loginController = new LoginController();
+   LoginController loginController = new LoginController();
 
     @FXML
     private Button btnLogin;
@@ -33,10 +32,14 @@ public class LoginpageController {
 
     @FXML
     void btnLoginOnAction(ActionEvent event) {
-        if (loginController.checkUserNameandPassword(txtUserName.getText(),txtPassword.getText())){
+        LoginDTO loginDTO = new LoginDTO();
+
+        loginDTO.setUsername(txtUserName.getText());
+        loginDTO.setPassword(txtPassword.getText());
+
+        if (loginController.checkUserNameandPassword(loginDTO))
+        {
             SceneManager.switchPage("/view/home_page.fxml");
-
-
         }else {
             SceneManager.switchPage("/view/Loginerror_page.fxml");
         }

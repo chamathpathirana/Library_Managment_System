@@ -1,6 +1,7 @@
 package Controllers.Login;
 
 import Controllers.DB.dbConnection;
+import Controllers.model.LoginDTO;
 import com.mysql.cj.jdbc.JdbcConnection;
 
 import java.sql.Connection;
@@ -12,7 +13,7 @@ public class LoginController {
     Connection connection = dbConnection.getInstance().getConnection();
 
 
-    public boolean checkUserNameandPassword(String username, String password) {
+    public boolean checkUserNameandPassword(LoginDTO loginDTO) {
         String SQL = "SELECT * FROM users";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -22,7 +23,7 @@ public class LoginController {
                 String dbUsername = resultSet.getString("username");
                 String dbPassword = resultSet.getString("password");
 
-                if (dbUsername.equals(username) && dbPassword.equals(password)) {
+                if (dbUsername.equals(loginDTO.getUsername()) && dbPassword.equals(loginDTO.getPassword())){
                     return true;
                 }
 
