@@ -65,7 +65,7 @@ public class AddBookPageController implements Initializable {
     }
     @FXML
     void btnExitOnAction(ActionEvent event) {
-        SceneManager.switchPage("/view/home_page.fxml");
+        SceneManager.switchPage("/view/books_page.fxml");
     }
 
     @Override
@@ -83,5 +83,26 @@ public class AddBookPageController implements Initializable {
         cmbList.add("Programming");
 
         txtCategory.setItems(cmbList);
+    }
+
+    public void btnHomeOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/home_page.fxml");
+    }
+
+    public void btnMemberOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/AddMembers_page.fxml");
+
+    }
+
+    public void btnBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/books_page.fxml");
+    }
+
+    public void btnAllBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/AllBooks_page.fxml");
+    }
+
+    public void btnLogoutOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/login_page.fxml");
     }
 }

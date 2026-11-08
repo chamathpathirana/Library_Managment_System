@@ -94,4 +94,28 @@ public class RetrunBookPageController implements Initializable {
         txtIssueDate.setEditable(false);
         txtDueDate.setEditable(false);
     }
+
+    public void btnLogOutOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/login_page.fxml");
+    }
+
+    public void btnBorrowHisOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/BorrowingHist_Page.fxml");
+    }
+
+    public void btnAllBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/AllBooks_page.fxml");
+    }
+
+    public void btnBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/books_page.fxml");
+    }
+
+    public void btnMemberOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/ViewMembers_page.fxml");
+    }
+
+    public void btnHomeOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/home_page.fxml");
+    }
 }
