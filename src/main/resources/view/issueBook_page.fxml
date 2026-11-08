@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="648.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.IssueBook.issueBookPageController">
    <children>
-      <Label layoutX="240.0" layoutY="185.0" prefHeight="26.0" prefWidth="122.0" text="Select Member :">
+      <Label layoutX="240.0" layoutY="185.0" prefHeight="26.0" prefWidth="122.0" text="Select Member :" textFill="#222223">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -34,10 +34,13 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="txtMembername" layoutX="240.0" layoutY="211.0" prefHeight="26.0" prefWidth="202.0" styleClass="text-field" stylesheets="@css/issueBook.css" />
-      <TextField fx:id="txtBookName" layoutX="240.0" layoutY="301.0" prefHeight="34.0" prefWidth="202.0" styleClass="text-field" stylesheets="@css/issueBook.css" />
-      <DatePicker fx:id="txtIssueDate" layoutX="240.0" layoutY="389.0" prefHeight="34.0" prefWidth="202.0" stylesheets="@css/issueBook.css" />
-      <DatePicker fx:id="txtDueDate" layoutX="571.0" layoutY="389.0" prefHeight="34.0" prefWidth="202.0" stylesheets="@css/issueBook.css" />
+      <TextField fx:id="txtMembername" layoutX="240.0" layoutY="211.0" prefHeight="26.0" prefWidth="202.0" promptText="Full Name" styleClass="text-field" stylesheets="@css/issueBook.css">
+         <font>
+            <Font size="9.0" />
+         </font></TextField>
+      <TextField fx:id="txtBookName" layoutX="240.0" layoutY="301.0" prefHeight="34.0" prefWidth="202.0" promptText="Book Name" styleClass="text-field" stylesheets="@css/issueBook.css" />
+      <DatePicker fx:id="txtIssueDate" layoutX="240.0" layoutY="389.0" prefHeight="34.0" prefWidth="202.0" promptText="Issue date" stylesheets="@css/issueBook.css" />
+      <DatePicker fx:id="txtDueDate" layoutX="571.0" layoutY="389.0" prefHeight="34.0" prefWidth="202.0" promptText="Due date" stylesheets="@css/issueBook.css" />
       <Button fx:id="btnExit" layoutX="587.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="48.0" prefWidth="122.0" styleClass="exit-button" stylesheets="@css/issueBook.css" text="Exit" textFill="#ec0a0a">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -49,20 +52,20 @@
          </font>
       </Button>
       <Button fx:id="btnGetMemberID" layoutX="766.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnGetMemberIDOnAction" styleClass="get-id-button" stylesheets="@css/issueBook.css" text="Get Member Id" />
-      <TextField fx:id="txtMmeberID" layoutX="564.0" layoutY="211.0" prefHeight="34.0" prefWidth="202.0" styleClass="text-field" stylesheets="@css/issueBook.css" />
+      <TextField fx:id="txtMmeberID" layoutX="564.0" layoutY="211.0" prefHeight="34.0" prefWidth="202.0" promptText="Member ID" styleClass="text-field" stylesheets="@css/issueBook.css" />
       <Label layoutX="571.0" layoutY="185.0" prefHeight="26.0" prefWidth="122.0" text="Member ID :">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="txtBookID" layoutX="564.0" layoutY="301.0" prefHeight="34.0" prefWidth="202.0" styleClass="text-field" stylesheets="@css/issueBook.css" />
+      <TextField fx:id="txtBookID" layoutX="564.0" layoutY="301.0" prefHeight="34.0" prefWidth="202.0" promptText="Book ID" styleClass="text-field" stylesheets="@css/issueBook.css" />
       <Label layoutX="571.0" layoutY="274.0" prefHeight="26.0" prefWidth="122.0" text=" Book ID:">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnGetBookId" layoutX="766.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnGetBookIdOnAction" prefHeight="33.0" prefWidth="135.0" styleClass="get-id-button" stylesheets="@css/issueBook.css" text="Get Book id" />
-      <TextField fx:id="txtissueId" layoutX="417.0" layoutY="472.0" prefHeight="26.0" prefWidth="188.0" styleClass="text-field" stylesheets="@css/issueBook.css" />
+      <Button fx:id="btnGetBookId" layoutX="766.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnGetBookIdOnAction" prefHeight="26.0" prefWidth="135.0" styleClass="get-id-button" stylesheets="@css/issueBook.css" text="Get Book id" />
+      <TextField fx:id="txtissueId" layoutX="417.0" layoutY="472.0" prefHeight="26.0" prefWidth="188.0" promptText="Issue ID :" styleClass="text-field" stylesheets="@css/issueBook.css" />
       <VBox layoutY="48.0" prefHeight="607.0" prefWidth="194.0" styleClass="sidebar-vbox" stylesheets="@css/slidebar.css">
          <children>
             <Button fx:id="btnHome" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="42.0" prefWidth="149.0" styleClass="sidebar-button" text="Home">
@@ -160,12 +163,12 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Text layoutX="215.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue Books" wrappingWidth="202.0">
+      <Text fill="#111469" layoutX="215.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Issue Books" wrappingWidth="202.0">
          <font>
             <Font name="System Bold" size="34.0" />
          </font>
       </Text>
-      <Text fill="#6b6666" layoutX="215.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage your library books and borrowing activities" wrappingWidth="544.0">
+      <Text fill="#225073" layoutX="215.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage your library books and borrowing activities" wrappingWidth="544.0">
          <font>
             <Font size="13.0" />
          </font>

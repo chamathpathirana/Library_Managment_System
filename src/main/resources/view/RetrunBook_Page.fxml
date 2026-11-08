@@ -7,45 +7,44 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="549.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.ReturnBook.RetrunBookPageController">
+<AnchorPane prefHeight="549.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.ReturnBook.RetrunBookPageController">
    <children>
-      <Label alignment="CENTER" prefHeight="75.0" prefWidth="423.0" style="-fx-background-color: #F3722C;" text="Retrun Book Page" textFill="#f4f0f0">
+      <Label alignment="CENTER" prefHeight="75.0" prefWidth="654.0" style="-fx-background-color: #F3722C;" text="Retrun Book Page" textFill="#f4f0f0">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <Label layoutX="68.0" layoutY="108.0" prefHeight="27.0" prefWidth="170.0" text="Select borrowed book :">
+      <Label layoutX="68.0" layoutY="108.0" prefHeight="27.0" prefWidth="170.0" text="Member Name">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="68.0" layoutY="181.0" prefHeight="27.0" prefWidth="155.0" text="Member infromation :">
+      <Label layoutX="75.0" layoutY="167.0" prefHeight="27.0" prefWidth="155.0" text="Member ID :">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="68.0" layoutY="261.0" prefHeight="20.0" prefWidth="129.0" text="Borrowed date :">
+      <Label layoutX="365.0" layoutY="149.0" prefHeight="20.0" prefWidth="129.0" text="Issue date :">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="327.0" text="Due date :">
+      <Label layoutX="375.0" layoutY="225.0" text="Due date :">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="393.0" prefHeight="20.0" prefWidth="103.0" text="Retrun date :">
+      <Label layoutX="383.0" layoutY="337.0" prefHeight="20.0" prefWidth="103.0" text="Retrun date :">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="70.0" layoutY="136.0" prefHeight="26.0" prefWidth="194.0" />
-      <TextField layoutX="70.0" layoutY="209.0" prefHeight="26.0" prefWidth="194.0" />
-      <DatePicker layoutX="70.0" layoutY="281.0" prefHeight="26.0" prefWidth="194.0" />
-      <DatePicker layoutX="70.0" layoutY="347.0" prefHeight="26.0" prefWidth="194.0" />
-      <DatePicker layoutX="70.0" layoutY="413.0" prefHeight="26.0" prefWidth="194.0" />
-      <Button fx:id="btnRetrunBook" layoutX="102.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnRetrunBookOnAction" prefHeight="42.0" prefWidth="130.0" style="-fx-background-color: #3A86FF;" text="Retrun Book" textFill="#f7f3f3">
+      <TextField fx:id="txtMemberName" layoutX="70.0" layoutY="136.0" prefHeight="26.0" prefWidth="194.0" />
+      <TextField fx:id="txtmemberID" layoutX="70.0" layoutY="196.0" prefHeight="26.0" prefWidth="194.0" />
+      <DatePicker fx:id="txtIssueDate" layoutX="365.0" layoutY="167.0" prefHeight="26.0" prefWidth="194.0" />
+      <DatePicker fx:id="txtDueDate" layoutX="365.0" layoutY="248.0" prefHeight="26.0" prefWidth="194.0" />
+      <DatePicker fx:id="txtReturnDate" layoutX="375.0" layoutY="356.0" prefHeight="26.0" prefWidth="194.0" />
+      <Button fx:id="btnReturnBook" layoutX="102.0" layoutY="480.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="42.0" prefWidth="130.0" style="-fx-background-color: #3A86FF;" text="Retrun Book" textFill="#f7f3f3">
          <font>
             <Font size="18.0" />
          </font>
@@ -55,5 +54,24 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <TextField fx:id="txtIssueBookID" layoutX="70.0" layoutY="390.0" prefHeight="26.0" prefWidth="194.0" />
+      <Label layoutX="68.0" layoutY="369.0" prefHeight="27.0" prefWidth="170.0" text="Issue Book ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookId" layoutX="70.0" layoutY="334.0" prefHeight="26.0" prefWidth="194.0" />
+      <Label layoutX="75.0" layoutY="300.0" prefHeight="27.0" prefWidth="155.0" text="Book ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="235.0" prefHeight="27.0" prefWidth="155.0" text="Book Name:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookName" layoutX="70.0" layoutY="261.0" prefHeight="26.0" prefWidth="194.0" />
+      <Button fx:id="btnSearchMemName" layoutX="264.0" layoutY="136.0" mnemonicParsing="false" onAction="#btnSearchMemNameOnAction" text="Search" />
    </children>
 </AnchorPane>
