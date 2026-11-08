@@ -49,7 +49,7 @@ public class ReturnBookController {
 
     public void returnBooks(String book_id, String member_id, LocalDate issue_date, LocalDate due_date, LocalDate return_date) {
 
-        String SQL = "INSERT INTO return_book_history(book_id, member_id, issue_date, due_date, return_date) VALUES(?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO  Return_BookHistory(book_id, member_id, issue_date, due_date, return_date) VALUES(?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
