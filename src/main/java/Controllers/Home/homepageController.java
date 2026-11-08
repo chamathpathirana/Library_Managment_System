@@ -58,6 +58,7 @@ public class homepageController {
     }
 
     public void btnBorrowHisOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/BorrowingHist_Page.fxml");
     }
 
 

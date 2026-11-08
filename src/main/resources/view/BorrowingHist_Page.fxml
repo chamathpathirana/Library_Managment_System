@@ -18,16 +18,16 @@
 
 <AnchorPane prefHeight="692.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BorrowingHistroy.BorrowingHistroy_page">
    <children>
-      <TableView layoutX="219.0" layoutY="196.0" prefHeight="478.0" prefWidth="998.0" stylesheets="@css/table.css">
+      <TableView fx:id="tblBookHistory" layoutX="219.0" layoutY="196.0" prefHeight="478.0" prefWidth="998.0" stylesheets="@css/table.css">
         <columns>
-          <TableColumn prefWidth="111.0" text="Member ID" />
-          <TableColumn prefWidth="116.0" text="Member name" />
-            <TableColumn prefWidth="123.0" text="Book ID" />
-            <TableColumn prefWidth="116.0" text="Book name" />
-            <TableColumn prefWidth="134.0" text="Issue date" />
-            <TableColumn prefWidth="146.4000244140625" text="Due date" />
-            <TableColumn prefWidth="111.0" text="Return date" />
-            <TableColumn prefWidth="146.4000244140625" text="Status" />
+          <TableColumn fx:id="colMemberID" prefWidth="111.0" text="Member ID" />
+          <TableColumn fx:id="ColMember_name" prefWidth="134.0" text="Member name" />
+            <TableColumn fx:id="ColBookID" prefWidth="101.0" text="Book ID" />
+            <TableColumn fx:id="ColBookName" prefWidth="116.0" text="Book name" />
+            <TableColumn fx:id="ColIssue_Date" prefWidth="134.0" text="Issue date" />
+            <TableColumn fx:id="ColDue_Date" prefWidth="146.4000244140625" text="Due date" />
+            <TableColumn fx:id="ColReturn_Date" prefWidth="111.0" text="Return date" />
+            <TableColumn fx:id="ColStatus" prefWidth="146.4000244140625" text="Status" />
         </columns>
          <styleClass>
             <String fx:value="table-cell" />
