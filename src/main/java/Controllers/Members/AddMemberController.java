@@ -1,6 +1,8 @@
 package Controllers.Members;
 
 import Controllers.DB.dbConnection;
+import Controllers.model.MemberDTO;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -37,16 +39,16 @@ public class AddMemberController {
 
     }
 
-    public void addMembers(String member_id,String full_name,String email, Integer phone_number,String address){
+    public void addMembers(MemberDTO memberDTO){
         String SQL = "INSERT INTO members(member_id , full_name , email , phone_number , address )VALUES(?,?,?,?,?);";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setString(1,member_id);
-            preparedStatement.setString(2,full_name);
-            preparedStatement.setString(3,email);
-            preparedStatement.setInt(4,phone_number);
-            preparedStatement.setString(5,address);
+            preparedStatement.setString(1, memberDTO.getMemberID());
+            preparedStatement.setString(2,memberDTO.getFullname());
+            preparedStatement.setString(3,memberDTO.getEmail());
+            preparedStatement.setInt(4,memberDTO.getPhoneNumber());
+            preparedStatement.setString(5,memberDTO.getAddress());
 
             preparedStatement.executeUpdate();
             System.out.println("Succesfully add member" + genarateMemberID());

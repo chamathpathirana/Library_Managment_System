@@ -1,17 +1,13 @@
 package Controllers.Members;
 
 import Controllers.Scean.SceneManager;
+import Controllers.model.MemberDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -67,15 +63,22 @@ public class AddMembersPageController implements Initializable {
 
 
     public void btnMemberRegisterOnAction(ActionEvent actionEvent) {
-        addMemberController.addMembers(
-                txtMemberId.getText(),
-                txtFullName.getText(),
-                txtEmail.getText(),
-                Integer.valueOf(txtPhoneNum.getText()),
-                txtAddress.getText()
-        );
 
-        txtMemberId.setText(addMemberController.genarateMemberID());
+
+        MemberDTO memberDTO = new MemberDTO();
+
+                memberDTO.setAddress(txtMemberId.getText());
+                memberDTO.setFullname(txtFullName.getText());
+                memberDTO.setEmail(txtEmail.getText());
+                memberDTO.setPhoneNumber(Integer.parseInt(txtPhoneNum.getText()));
+                memberDTO.setAddress(txtAddress.getText());
+                memberDTO.setMemberID(addMemberController.genarateMemberID());
+
+
+                txtMemberId.setText(memberDTO.getMemberID());
+
+                addMemberController.addMembers(memberDTO);
+
         txtMemberId.setEditable(false);
 
     }
