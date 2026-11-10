@@ -2,6 +2,7 @@ package Controllers.Books.IssueBook;
 
 
 import Controllers.DB.dbConnection;
+import Controllers.model.IssueBookDTO;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -76,17 +77,17 @@ public class IssueBookController {
     }
 
 
-    public void issueBooks(String IssueID, String MemberID, String BookID, LocalDate IssueDate, LocalDate DueDate) {
+    public void issueBooks(IssueBookDTO issueBookDTO) {
         String SQL = "INSERT INTO issuebook(Issue_id, Member_id, Book_id, issuedate, duedate) VALUES (?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1,IssueID);
-            preparedStatement.setString(2,MemberID);
-            preparedStatement.setString(3,BookID);
-            preparedStatement.setDate(4, Date.valueOf(IssueDate));
-            preparedStatement.setDate(5, Date.valueOf(DueDate));
+            preparedStatement.setString(1,issueBookDTO.getIssueID());
+            preparedStatement.setString(2,issueBookDTO.getMemberID());
+            preparedStatement.setString(3,issueBookDTO.getBookID());
+            preparedStatement.setDate(4, Date.valueOf(issueBookDTO.getIssuedate()));
+            preparedStatement.setDate(5, Date.valueOf(issueBookDTO.getDuedate()));
 
             preparedStatement.executeUpdate();
             System.out.println("vadee Goda......");

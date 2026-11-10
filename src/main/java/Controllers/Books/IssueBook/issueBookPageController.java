@@ -1,6 +1,7 @@
 package Controllers.Books.IssueBook;
 
 import Controllers.Scean.SceneManager;
+import Controllers.model.IssueBookDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -80,13 +81,18 @@ public class issueBookPageController implements Initializable {
 
     @FXML
     void btnIssueBooksOnAction(ActionEvent event) {
-        issueBookController.issueBooks(
-                issueBookController.genarateIssueBookId(),
-                txtMmeberID.getText(),
-                txtBookID.getText(),
-                txtIssueDate.getValue(),
-                txtDueDate.getValue()
-        );
+        IssueBookDTO issueBookDTO = new IssueBookDTO();
+
+
+                issueBookDTO.setIssueID(issueBookController.genarateIssueBookId());
+                issueBookDTO.setMemberID(issueBookController.genarateIssueBookId());
+                issueBookDTO.setBookID(txtBookID.getText());
+                issueBookDTO.setIssuedate(txtIssueDate.getValue());
+                issueBookDTO.setDuedate(txtDueDate.getValue());
+
+                issueBookController.issueBooks(issueBookDTO);
+
+
 
     }
 
