@@ -1,10 +1,12 @@
 package Controllers.Members;
 
+import Controllers.Alert.Alertutill;
 import Controllers.Scean.SceneManager;
 import Controllers.model.MemberDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
@@ -74,6 +76,33 @@ public class AddMembersPageController implements Initializable {
                 memberDTO.setAddress(txtAddress.getText());
                 memberDTO.setMemberID(addMemberController.genarateMemberID());
 
+
+
+
+
+        if (memberDTO.getMemberID() == null || memberDTO.getMemberID().trim().isEmpty() ||
+                memberDTO.getFullname() == null || memberDTO.getFullname().trim().isEmpty() ||
+                memberDTO.getAddress() == null || memberDTO.getAddress().trim().isEmpty() ||
+                memberDTO.getEmail() == null || memberDTO.getEmail().trim().isEmpty() ||
+                memberDTO.getPhoneNumber() == 0
+        ){
+            Alertutill.showAlert(Alert.AlertType.WARNING, "WARNING", "Fill All Requid Fields");
+
+            return;
+        }
+
+        boolean MemberAdded = addMemberController.addMembers(memberDTO);
+
+        if (MemberAdded){
+            Alertutill.showAlert(Alert.AlertType.INFORMATION,
+                    "SUCESS!",
+                    "Sucessfully Add Member!  Your Member Id : " + memberDTO.getMemberID());
+        } else {
+            Alertutill.showAlert(Alert.AlertType.ERROR,
+                    "Error",
+                    "Faild to add Student"
+            );
+        }
 
                 txtMemberId.setText(memberDTO.getMemberID());
 

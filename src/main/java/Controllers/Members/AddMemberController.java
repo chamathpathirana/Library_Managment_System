@@ -39,7 +39,7 @@ public class AddMemberController {
 
     }
 
-    public void addMembers(MemberDTO memberDTO){
+    public boolean addMembers(MemberDTO memberDTO){
         String SQL = "INSERT INTO members(member_id , full_name , email , phone_number , address )VALUES(?,?,?,?,?);";
 
         try {
@@ -56,5 +56,6 @@ public class AddMemberController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return true;
     }
 }
