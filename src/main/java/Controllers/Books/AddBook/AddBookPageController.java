@@ -1,20 +1,18 @@
 package Controllers.Books.AddBook;
 
+import Controllers.Alert.Alertutill;
 import Controllers.Scean.SceneManager;
+import Controllers.model.BookDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -68,18 +66,43 @@ public class AddBookPageController implements Initializable {
 
     @FXML
     void btnAddBookOnAction(ActionEvent event) {
-        addBookController.addBooks(
-                txtBookID.getText(),
-                txtBookTitle.getText(),
-                txtAuthor.getText(),
-                txtCategory.getValue().toString(),
-                Integer.parseInt(txtQuantity.getText()),
-                txtPublishedYear.getText()
+        BookDTO bookDTO = new BookDTO();
 
-        );
+
+        bookDTO.setBookId(txtBookID.getText());
+        bookDTO.setBookTitle(txtBookTitle.getText());
+        bookDTO.setBookAuthor(txtAuthor.getText());
+        bookDTO.setCategory(txtCategory.getValue().toString());
+        bookDTO.setQuantity(txtQuantity.getText());
+        bookDTO.setPublishedYear(txtPublishedYear.getText());
+
+        if (bookDTO.getBookId() == null || bookDTO.getBookId().trim().isEmpty() ||
+                bookDTO.getBookTitle() == null || bookDTO.getBookTitle().trim().isEmpty() ||
+                bookDTO.getBookAuthor() == null || bookDTO.getBookAuthor().trim().isEmpty() ||
+                bookDTO.getQuantity() == null || bookDTO.getQuantity().trim().isEmpty() ||
+                bookDTO.getCategory() == null || bookDTO.getCategory().trim().isEmpty() ||
+                bookDTO.getPublishedYear() == null
+
+        ) {
+            Alertutill.showAlert(Alert.AlertType.WARNING,
+                    "WARNING",
+                    "Fill All Requid Fields");
+            return;
+        }
+
+        boolean bookAdded = addBookController.addBooks(bookDTO);
+
+        if (bookAdded) {
+            Alertutill.showAlert(Alert.AlertType.INFORMATION,
+                    "SUCESS",
+                    "Sucessfully Add Book!  Your Book Id : " + bookDTO.getBookId());
+        } else {
+            Alertutill.showAlert(Alert.AlertType.ERROR,
+                    "ERROR",
+                    "Faild To Add Book");
+        }
         txtBookID.setText(addBookController.genarateBookId());
         txtBookID.setEditable(false);
-
 
     }
     @FXML
