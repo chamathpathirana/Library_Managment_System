@@ -1,5 +1,7 @@
 package Controllers.Login;
 
+import Controllers.Scean.SceneManager;
+import Controllers.model.LoginDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +16,7 @@ import java.io.IOException;
 
 public class LoginpageController {
 
-    LoginController loginController = new LoginController();
+   LoginController loginController = new LoginController();
 
     @FXML
     private Button btnLogin;
@@ -30,47 +32,23 @@ public class LoginpageController {
 
     @FXML
     void btnLoginOnAction(ActionEvent event) {
-        if (loginController.checkUserNameandPassword(txtUserName.getText(),txtPassword.getText())){
-            Stage stage = new Stage();
+        LoginDTO loginDTO = new LoginDTO();
 
+        loginDTO.setUsername(txtUserName.getText());
+        loginDTO.setPassword(txtPassword.getText());
 
-            try {
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage.show();
-
-            Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            errorStage.close();
-
-
+        if (loginController.checkUserNameandPassword(loginDTO))
+        {
+            SceneManager.switchPage("/view/home_page.fxml");
         }else {
-            Stage stage = new Stage();
-            try {
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Loginerror_page.fxml"))));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage.show();
-            Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            errorStage.close();
+            SceneManager.switchPage("/view/Loginerror_page.fxml");
         }
 
     }
 
     @FXML
     void btnRestOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/login_page.fxml");
 
 
     }

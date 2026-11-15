@@ -1,0 +1,197 @@
+/* ===== ALL BOOKS TABLE DESIGN ===== */
+
+.table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px;
+    -fx-border-color: #D9E4F2;
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 10px;
+    -fx-padding: 0px;
+    -fx-table-cell-border-color: #E8EDF4;
+    -fx-fixed-cell-size: 34px;
+}
+
+/* ===== TABLE HEADER ===== */
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(
+        to bottom,
+        #203B63,
+        #142B4D
+    );
+    -fx-background-radius: 9px 9px 0px 0px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent #344F75 #344F75 transparent;
+    -fx-border-width: 0px 1px 1px 0px;
+    -fx-size: 38px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0px 8px 0px 8px;
+}
+
+/* ===== TABLE CELLS ===== */
+
+.table-view .table-cell {
+    -fx-text-fill: #26364A;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-padding: 5px 8px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: transparent #E8EDF4 #E8EDF4 transparent;
+    -fx-border-width: 0px 1px 1px 0px;
+}
+
+/* ===== ALTERNATE ROW COLORS ===== */
+
+.table-row-cell {
+    -fx-background-color: #FFFFFF;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #F5F8FC;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #FFFFFF;
+}
+
+/* ===== ROW HOVER EFFECT ===== */
+
+.table-row-cell:hover {
+    -fx-background-color: #E8F2FF;
+}
+
+/* ===== SELECTED ROW ===== */
+
+.table-row-cell:selected {
+    -fx-background-color: #D6E7FF;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #173B68;
+    -fx-font-weight: bold;
+}
+
+/* ===== EMPTY TABLE AREA ===== */
+
+.table-view .virtual-flow .clipped-container .sheet {
+    -fx-background-color: #FFFFFF;
+}
+
+/* ===== SCROLL BAR ===== */
+
+.table-view .scroll-bar:vertical,
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: #F3F6FA;
+    -fx-background-radius: 8px;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #A7BCD8;
+    -fx-background-radius: 8px;
+}
+
+.table-view .scroll-bar .thumb:hover {
+    -fx-background-color: #527DB5;
+}
+
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 3px;
+}
+
+.table-view .scroll-bar .increment-arrow,
+.table-view .scroll-bar .decrement-arrow {
+    -fx-background-color: #527DB5;
+}
+
+/* ===== SEARCH TEXTFIELD ===== */
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8px;
+    -fx-border-color: #D5E1F0;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1.2px;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-text-fill: #203B63;
+    -fx-prompt-text-fill: #94A3B8;
+
+    -fx-padding: 9px 12px;
+    -fx-pref-height: 40px;
+
+    -fx-effect: dropshadow(
+        gaussian, rgba(30, 64, 110, 0.06), 5, 0, 0, 2
+    );
+}
+
+/* TextField Focus */
+
+.text-field:focused {
+    -fx-border-color: #2878C8;
+    -fx-border-width: 1.5px;
+    -fx-background-color: #FFFFFF;
+
+    -fx-effect: dropshadow(
+        gaussian, rgba(40, 120, 200, 0.18), 8, 0, 0, 1
+    );
+}
+
+/* ===== SEARCH BUTTON ===== */
+
+.search-button {
+    -fx-background-color: linear-gradient(
+        to bottom,
+        #347FC5,
+        #1D5F9E
+    );
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 40px;
+    -fx-pref-width: 110px;
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+        gaussian, rgba(20, 60, 110, 0.16), 6, 0, 0, 2
+    );
+}
+
+/* Button Hover */
+
+.search-button:hover {
+    -fx-background-color: linear-gradient(
+        to bottom,
+        #438ED5,
+        #286FAF
+    );
+
+    -fx-effect: dropshadow(
+        gaussian, rgba(20, 60, 110, 0.25), 9, 0, 0, 3
+    );
+}
+
+/* Button Pressed */
+
+.search-button:pressed {
+    -fx-background-color: #174C80;
+    -fx-effect: none;
+}

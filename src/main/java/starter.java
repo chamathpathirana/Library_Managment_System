@@ -1,3 +1,4 @@
+import Controllers.Scean.SceneManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,7 +12,7 @@ public class starter extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-          stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
-          stage.show();
+        SceneManager.setStage(stage);
+        SceneManager.switchPage("/view/login_page.fxml");
     }
 }

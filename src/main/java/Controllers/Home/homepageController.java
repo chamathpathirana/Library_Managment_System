@@ -1,5 +1,6 @@
 package Controllers.Home;
 
+import Controllers.Scean.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,38 +25,21 @@ public class homepageController {
     @FXML
     private Button btnMembers;
 
+    @FXML
+    private Button btnAllBooks;
+
     //=================btnBooks eka create================
 
     @FXML
     void btnBooksOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/books_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-//===============Clear part==========================
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/books_page.fxml");
 
     }
 
     //================Homebutton eka create===================
     @FXML
     void btnHomeOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/home_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/home_page.fxml");
 
 
     }
@@ -63,34 +47,24 @@ public class homepageController {
 //=====================LogOut button eka create ========================
     @FXML
     void btnLogOutOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/login_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
-
+        SceneManager.switchPage("/view/login_page.fxml");
     }
 
 //=====================Member button eka create========================
     @FXML
     void btnMemberOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Members_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-
-        Stage errorStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        errorStage.close();
+        SceneManager.switchPage("/view/ViewMembers_page.fxml");
 
     }
 
+    public void btnBorrowHisOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/BorrowingHist_Page.fxml");
+    }
+
+
+
+    public void btnAllBooksOnAction(ActionEvent actionEvent) {
+        SceneManager.switchPage("/view/AllBooks_page.fxml");
+
+    }
 }

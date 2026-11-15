@@ -1,0 +1,81 @@
+
+/* Main Dashboard Cards */
+
+.stat-card {
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-width: 2px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 15, 0.2, 0, 6);
+    -fx-cursor: hand;
+}
+
+/* Total Books - Blue */
+
+.total-books-card {
+    -fx-background-color: linear-gradient(to bottom right, #F0F7FF, #D6E9FF);
+    -fx-border-color: #2583F5;
+}
+
+/* Members - Green */
+
+.members-card {
+    -fx-background-color: linear-gradient(to bottom right, #F0FFF5, #D5F7E2);
+    -fx-border-color: #19B65A;
+}
+
+/* Current Borrow Books - Purple */
+
+.borrow-card {
+    -fx-background-color: linear-gradient(to bottom right, #F8F2FF, #E8D9FF);
+    -fx-border-color: #9147E8;
+}
+
+/* Overdue Books - Orange */
+
+.overdue-card {
+    -fx-background-color: linear-gradient(to bottom right, #FFF8ED, #FFE5C2);
+    -fx-border-color: #FF941F;
+}
+
+/* Card Hover Effect */
+
+.stat-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.28), 20, 0.3, 0, 9);
+    -fx-translate-y: -5px;
+}
+
+/* Card Titles */
+
+.card-title {
+    -fx-font-family: "Arial";
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #142B4D;
+}
+
+/* Card Numbers */
+
+.card-number {
+    -fx-font-family: "Arial";
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+}
+
+/* Number Colors */
+
+.total-books-number {
+    -fx-text-fill: #1769D2;
+}
+
+.members-number {
+    -fx-text-fill: #159447;
+}
+
+.borrow-number {
+    -fx-text-fill: #7636C8;
+}
+
+.overdue-number {
+    -fx-text-fill: #E77A0B;
+}

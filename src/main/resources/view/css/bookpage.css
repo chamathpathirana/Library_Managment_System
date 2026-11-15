@@ -1,0 +1,193 @@
+
+/* ==============================
+   MAIN BACKGROUND
+   ============================== */
+
+.root {
+    -fx-background-color: #F5F8FC;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.header {
+    -fx-background-color: linear-gradient(
+        to right,
+        #172B4D,
+        #294C7A,
+        #527DB5
+    );
+    -fx-background-radius: 0 0 16 16;
+    -fx-padding: 15 25 15 25;
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(23, 43, 77, 0.15),
+        12, 0.15, 0, 4
+    );
+}
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* ==============================
+   BOOK CARDS
+   ============================== */
+
+.book-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+    -fx-border-color: #E0E8F2;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(30, 50, 80, 0.10),
+        15, 0.12, 0, 5
+    );
+}
+
+/* Add Book Card */
+
+.add-book-card {
+    -fx-background-color: #F0FBF7;
+    -fx-border-color: #BDEEDF;
+}
+
+/* Issue Book Card */
+
+.issue-book-card {
+    -fx-background-color: #F0F7FF;
+    -fx-border-color: #C6E0FF;
+}
+
+/* Return Book Card */
+
+.return-book-card {
+    -fx-background-color: #FFF6EF;
+    -fx-border-color: #FFDDBF;
+}
+
+/* Borrow History Card */
+
+.history-book-card {
+    -fx-background-color: #F7F2FF;
+    -fx-border-color: #E0D2FF;
+}
+
+/* ==============================
+   CARD TITLES
+   ============================== */
+
+.card-title {
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #172B4D;
+}
+
+/* ==============================
+   CARD DESCRIPTION
+   ============================== */
+
+.card-description {
+    -fx-font-size: 13px;
+    -fx-text-fill: #60718D;
+}
+
+/* ==============================
+   CARD BUTTONS
+   ============================== */
+
+.book-button {
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 22px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(30, 50, 80, 0.12),
+        6, 0.1, 0, 2
+    );
+}
+
+/* Add Book Button */
+
+.add-book-button {
+    -fx-background-color: #209B76;
+}
+
+.add-book-button:hover {
+    -fx-background-color: #168562;
+}
+
+/* Issue Book Button */
+
+.issue-book-button {
+    -fx-background-color: #2588E8;
+}
+
+.issue-book-button:hover {
+    -fx-background-color: #176FC4;
+}
+
+/* Return Book Button */
+
+.return-book-button {
+    -fx-background-color: #F07832;
+}
+
+.return-book-button:hover {
+    -fx-background-color: #DA5E1B;
+}
+
+/* Borrow History Button */
+
+.history-book-button {
+    -fx-background-color: #7950D8;
+}
+
+.history-book-button:hover {
+    -fx-background-color: #6339BE;
+}
+
+/* ==============================
+   ARROW ICONS
+   ============================== */
+
+.card-arrow {
+    -fx-font-size: 22px;
+    -fx-text-fill: #60718D;
+    -fx-font-weight: bold;
+}
+
+/* ==============================
+   SMALL DECORATIVE ICON CIRCLES
+   ============================== */
+
+.add-book-icon {
+    -fx-background-color: #C5F1E3;
+    -fx-background-radius: 50px;
+}
+
+.issue-book-icon {
+    -fx-background-color: #D0E7FF;
+    -fx-background-radius: 50px;
+}
+
+.return-book-icon {
+    -fx-background-color: #FFE0C2;
+    -fx-background-radius: 50px;
+}
+
+.history-book-icon {
+    -fx-background-color: #E4D7FF;
+    -fx-background-radius: 50px;
+}
