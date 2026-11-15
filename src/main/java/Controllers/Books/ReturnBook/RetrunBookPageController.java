@@ -1,6 +1,8 @@
 package Controllers.Books.ReturnBook;
 
 import Controllers.Scean.SceneManager;
+import Controllers.model.IssueBookDTO;
+import Controllers.model.ReturnBookDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -72,6 +74,12 @@ public class RetrunBookPageController implements Initializable {
     }
 
     public void btnSearchMemNameOnAction(ActionEvent actionEvent) {
+
+        ReturnBookDTO returnBookDTO = new ReturnBookDTO();
+
+
+
+
         Map<String, String> data = returnBookController.get(txtMemberName.getText());
 
         if (data != null) {
